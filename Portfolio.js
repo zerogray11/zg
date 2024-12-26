@@ -130,9 +130,4 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(container);
     });
 });
-fetch('http://localhost:3000/api/message')
-  .then(response => response.json())
-  .then(data => {
-    console.log(data.message);
-    document.getElementById('apiMessage').innerText = data.message;
-  });
+
