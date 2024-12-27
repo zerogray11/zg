@@ -35,8 +35,10 @@
 align-items: center;
 justify-content: space-between;
  background-color: rgba(255, 255, 255, 0.6);
- height:45%;
- width: 80%;
+ margin: 0 auto;
+    width: 90%;
+    min-height: fit-content; /* Allows height to grow with content */
+    height: auto;
  gap:10px;
  perspective: 1000px;
     transform-style: preserve-3d;
@@ -303,7 +305,8 @@ font-weight: 500;
     }
   }
   #boxAbout{
-    height:103svh;
+    height:115vh;
+    
     display: flex;
     flex-direction: column;
     background-image: url(aurore.jpeg);
@@ -356,21 +359,22 @@ font-weight: 500;
  
  }
  #aboutInfo{
-    width: 85%;
-    height: 100%;
+  
+    width:fit-content;
+    height: fit-content;
    
     display: flex;
     flex-direction: row;
-    gap:30px;
+    gap:50px;
    
  
  
  }
  #description{
- margin-top: 40px;
- 
- height: 90%;
- width: 100%;
+margin-top: 10px;
+max-width: 1000px;
+ height:90%;
+ width: 50%;
  display: flex;
  flex-direction: column;
  align-items: center;
@@ -416,14 +420,13 @@ font-weight: 500;
  .descp{
     margin-top: 0;
     background-color: rgb(47, 63, 74,0.8);
-line-height: 2;
-Height: 70%;
+line-height: 1.5;
+
 Font-family: 'Montserrat', sans-serif;
 color: greenyellow;
 font-weight: 530 ;
 font-size: 1rem;
 text-align: center;
-width: 80%;
 perspective: 1000px;
     transform-style: preserve-3d;
     padding: 20px;
@@ -435,16 +438,21 @@ perspective: 1000px;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-
+    margin: 0 auto;
+    max-width: 600px;
+    width: fit-content;
+    min-height: fit-content; /* Allows height to grow with content */
+    
 
  }
  #skills{
-    margin-top: 10px;
-   
+    margin-top: 3px;
+   align-items: center;
+   justify-content: center;
     display: flex;
     flex-direction: column;
-    height: 80%;
-    width: 100%;
+    height: 90%;
+    width: 50%;
 
  
  
@@ -461,7 +469,7 @@ perspective: 1000px;
     font-weight: 500;
     color: white;
     margin-top: 30px;
-    margin-left: 90px;
+    
     font-family: 'Orbitron', sans-serif;
     text-align: center;
     box-shadow: 
@@ -477,15 +485,15 @@ flex-direction: row;
 justify-content: center;
 align-items: center;
 background-color: rgb(47, 63, 74,0.7);
-width: max-content;
+width: fit-content;
    
  }
  #itTitle svg {
     margin-right: 10px;
  }
  #itbuttons{
-    height:80%;
-    width: 100%;
+    height:fit-content;
+    width: fit-content;
     display: flex;
     flex-direction: column;
     gap:20px;
@@ -503,8 +511,8 @@ width: max-content;
     text-align: center;
     font-family: 'Orbitron', sans-serif;
     color:rgb(153, 246, 13);
-    height:40px;
-    width: 40%;
+    height:fit-content;
+    width: fit-content;
     font-weight: 550;
     cursor: pointer;
     perspective: 1000px;
@@ -556,9 +564,9 @@ border-radius: 10px;
 flex-direction: row;
 justify-content: center;
 align-items: center;
-margin-left: 140px;
+
 background-color: rgb(47, 63, 74,0.7);
-width: max-content;
+width: fit-content;
    
  }
  .certTitle svg {
@@ -574,8 +582,8 @@ width: max-content;
     text-align: center;
     font-family: 'Orbitron', sans-serif;
     font-weight: 550;
-    height:40px;
-    width: 40%;
+    height:fit-content;
+    width: fit-content;
     cursor: pointer;
     color:greenyellow;
 
@@ -590,8 +598,8 @@ width: max-content;
     text-align: center;
     font-family: 'Orbitron', sans-serif;
     font-weight: 520;
-    height:40px;
-    width: 130px;
+    height:fit-content;
+    width: fit-content;
     cursor: pointer;
     color:greenyellow;
     perspective: 1000px;
@@ -698,12 +706,7 @@ width: max-content;
     transform-style: preserve-3d;
     padding: 40px;
     border-radius: 50px;
-    /*box-shadow: 
-        0 10px 20px rgba(0,0,0,0.1),
-        0 6px 6px rgba(0,0,0,0.1),
-        inset 0 2px 4px rgba(255,255,255,0.5);*/
     transition: all 0.3s ease;
-    
     overflow: hidden;
     display: flex;
     flex-direction: row;
@@ -916,13 +919,14 @@ align-items: center;
  
  
  #boxContact{
- height:100svh;
+ height:110svh;
  background-image: url(glacier.jpeg);
 background-size: cover;
  display: flex;
  flex-direction: column;
- align-items: center;
- gap:20px;
+ align-items: center !important;
+ justify-content: center !important;
+ gap:80px;
  
  }
  .ctitle{
@@ -980,13 +984,16 @@ background-size: cover;
   width: 80%; 
   display: flex;
   flex-direction: row;
-  gap:50px;
+  align-items: center;
+   justify-content: center;
+ gap:100px;
   margin-right: 60px;
  }
  #connect{
-    
-    height:100%;
-    width:50%;
+   margin-top: 100px;
+   background: linear-gradient(to right, rgba(255, 105, 180, 1), rgba(65, 105, 225, 1));
+    height:max-content;
+    width:max-content;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -1023,48 +1030,18 @@ background-size: cover;
  .email svg{
     margin-right: 10px;
  }
- /*.eaddress{
- font-size: 1.2rem;
- margin-left: 30px;
- font-family: 'Exo 2', sans-serif;
- font-weight: 500;
- color:silver;
- }*/
+ 
  .eaddress {
     font-size: 1.2rem;
-    margin-left: 30px;
+    margin-right: 30px;
     font-family: 'Exo 2', sans-serif;
     font-weight: 530;
     color: rgb(178, 178, 178);
     
    
-  }
+ }
   
-  .llink::before, .eaddress::before {
-    content: '';
-    position: absolute;
-    left: -6px;
-    bottom: 50px;
-    width: calc(60% + 20px);
-    height: 60%;
-    background: linear-gradient(to right, rgba(255, 105, 180, 1), rgba(65, 105, 225, 1));
-    transform: rotate(-2deg);
-    z-index: -1;
-    border-radius: 5px;
-    animation: paint-sweep 3s infinite alternate;
-    border: 1px solid white;
-  }
   
-  @keyframes paint-sweep {
-    from {
-      transform: rotate(-2deg) scale(0.9);
-      opacity: 0.7;
-    }
-    to {
-      transform: rotate(2deg) scale(1.1);
-      opacity: 0.5;
-    }
-  }
  #linkedinbox{
     height: 30%;
     width: 100%;
@@ -1143,8 +1120,8 @@ background-size: cover;
     border-radius: 5px;      
     width: auto;     
   color:white;
-    height:18%;
-    width: 40%;
+    height:fit-content;
+    width: fit-content;
     font-family: 'Orbitron', sans-serif;
     font-weight: 500;
     border: 2px solid white;
@@ -1184,7 +1161,8 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
  .emailboxwrite{
  height:50%;
  width: 100%;
- 
+ max-width: 500px;
+ min-width: 150px;
  }
  .subjecttitle{
     font-family: 'Orbitron', sans-serif;
@@ -1201,6 +1179,7 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
  height:40%;
  width: 100%;
  background-color: white;
+ max-width: 500px;
  }
  .messagetitle{
     font-family: 'Orbitron', sans-serif;
@@ -1217,6 +1196,7 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
     height:150%;
  width: 100%;
  background-color: white;
+ max-width: 500px;
  }
  
  #serviceBoxes > div {
@@ -1272,8 +1252,8 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
 #serviceBoxes{
     display: flex;
     flex-direction: row;
-    height: 40%;
-    width: 80%;
+    height: fit-content;
+    width: fit-content;
     gap:15px;
 }
 
