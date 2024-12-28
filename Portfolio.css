@@ -359,15 +359,17 @@ font-weight: 500;
  }
  #aboutInfo{
   
-    width:100%;
+    width:fit-content;
     height: fit-content;
    justify-content: space-evenly;
     display: flex;
     flex-direction: row;
-    gap:50px;
+    gap: 20px;
+   
    }
  #description{
 margin-top: 10px;
+
 max-width: 1000px;
  height:90%;
  width: 50%;
@@ -437,19 +439,29 @@ perspective: 1000px;
     margin: 0 auto;
     max-width: 600px;
     width: fit-content;
-    min-height: fit-content; /* Allows height to grow with content */
+  
+   /* Allows height to grow with content */
     
 
  }
  #skills{
-    margin-top: 3px;
+   margin-top:10px;
+
    align-items: center;
    justify-content: center;
     display: flex;
     flex-direction: column;
     height: 90%;
-    width: fit-content;
-
+    width: max-content;
+    
+box-sizing: border-box;
+    width: 100%;
+    max-width: 1000px;
+    max-height: 90vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
  
  
  }
@@ -461,10 +473,11 @@ perspective: 1000px;
  gap:30px;
  }
  #itTitle{
+   position:relative !important;
     font-size: 1.5rem;
     font-weight: 500;
     color: white;
-    margin-top: 30px;
+   
     
     font-family: 'Orbitron', sans-serif;
     text-align: center;
@@ -492,6 +505,7 @@ width: fit-content;
     width: fit-content;
     display: flex;
     flex-direction: column;
+    position: relative;
     gap:20px;
    
  }
@@ -504,10 +518,20 @@ width: fit-content;
    gap: 15px;
    
  }
- 
+ #description,
+#skills {
+     /* Prevents content overflow */
+    box-sizing: border-box !important;
+    width: 100% !important; /* Use percentage or a suitable relative size */
+     /* Allow the height to adjust to the content */
+    max-width: 1000px !important; /* Optional: Restrict the maximum size */
+    max-height: 90vh !important; /* /* Includes padding and border in width/height */
+}
+
  
  .javascript, .java, .sql, .html, .css, .nodejs, .aws, .photoshop{
-
+   max-width: 100%;
+   position: relative;
     text-align: center;
     font-family: 'Orbitron', sans-serif;
     color:rgb(153, 246, 13);
@@ -546,6 +570,7 @@ width: fit-content;
  
 
  #certifications{
+   position: relative;
  display: flex;
  flex-direction: column;
  justify-content: flex-end;
@@ -555,6 +580,7 @@ width: fit-content;
  
  }
  .certTitle{
+   position: relative;
  text-align: center;
  font-weight: 550;
  font-family: 'Orbitron', sans-serif;
@@ -581,6 +607,7 @@ width: fit-content;
     margin-right: 10px;
  }
  .certificates{
+   position: relative !important;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -677,7 +704,7 @@ button:hover {
     display: flex;
     justify-content: space-evenly; 
     gap: 10px;                   
-    margin-bottom: 10px;          
+             
 }
 
  
@@ -775,7 +802,7 @@ button:hover {
     border-radius: 50%;
     padding: 20px;
     background-color: rgb(50, 116, 144);
-   margin-top: 0px;
+   margin-top: -10px;
    /*box-shadow: 
    0 10px 20px rgba(0,0,0,0.1),
    0 6px 6px rgba(0,0,0,0.1),
@@ -955,14 +982,14 @@ align-items: center;
  
  
  #boxContact{
- height:110svh;
+ height:115svh;
  background-image: url(glacier.jpeg);
 background-size: cover;
  display: flex;
  flex-direction: column;
  align-items: center !important;
- justify-content: center !important;
- gap:80px;
+ justify-content: space-between!important;
+ 
  
  }
  .ctitle{
@@ -993,6 +1020,7 @@ background-size: cover;
 
  
  }
+ 
  .contactTitle{
     margin-top: 0px;
     font-size: 2rem;
@@ -1016,14 +1044,16 @@ background-size: cover;
     
  }
  #Content{
-  height: 70svh;
-  width: 80%; 
+  
+  height: 70%;
+  width: 100%; 
   display: flex;
   flex-direction: row;
-  align-items: center;
-   justify-content: space-evenly;
- gap:100px;
-  margin-right: 60px;
+  align-items:center!important;
+   justify-content: space-evenly!important;
+
+gap: 20px;
+  
  }
  #connect{
    margin-top: 100px;
@@ -1113,12 +1143,12 @@ background-size: cover;
  
  
  #writingboxes{
-    margin-top:20px;
+   
     height:100%;
     width:50%;
     display: flex;
     flex-direction: column;
-    gap:35px;
+    justify-content: space-evenly !important;
   
  }
  .Emailbox{
@@ -1144,6 +1174,7 @@ background-size: cover;
     flex-direction: column;
  }
  .sendmessage{
+   margin-top: 10px;
     display: flex;
     justify-content: center;  
     align-items: center;     
@@ -1164,7 +1195,6 @@ background-size: cover;
     font-size: 0.9rem;
     perspective: 1000px;
     transform-style: preserve-3d;
-    padding: 20px;
     border-radius: 10px;
     box-shadow: 
         0 10px 20px rgba(0,0,0,0.1),
@@ -1208,6 +1238,7 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
     background: linear-gradient(to right, rgba(255, 105, 180, 0.8), rgba(65, 105, 225, 0.8));
     width: max-content;
     border-radius: 50%;
+    margin-top: 10px;
     padding:10px;
     border: 1px solid white;
  }
@@ -1251,7 +1282,7 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
     display: flex;
     flex-direction: column;
     height:100svh;
-    width: fit-content;
+    
     align-items: center;
     background-image: url(Services.png);
     background-size: cover;
@@ -1291,8 +1322,9 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
     display: flex;
     flex-direction: row;
     height: fit-content;
-    width: fit-content;
-    gap:15px;
+    width: 100%;
+    justify-content: space-evenly;
+   
 }
 
 .Backendservice{
@@ -1328,6 +1360,20 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
    
     
 }
+.Backendservice, 
+.Frontendservice, 
+.programManagementService, 
+.onlineMarketingservice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 30%;
+    overflow: hidden  !important;/* Prevent content from overflowing the box */
+    position: relative  !important; /* Ensure positioning context for child elements */
+    box-sizing: border-box  !important; /* Include padding and borders in the element's dimensions */
+}
+
 .frontendtitle{
     font-size: 1.2rem;
     font-weight: 520;
