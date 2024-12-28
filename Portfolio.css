@@ -176,8 +176,7 @@ font-weight: 500;
     display: flex;
     flex-direction: row;
     width:100%;
-    justify-content: space-between;
-   
+   justify-content: space-between;
  }
  
  
@@ -360,16 +359,13 @@ font-weight: 500;
  }
  #aboutInfo{
   
-    width:fit-content;
+    width:100%;
     height: fit-content;
-   
+   justify-content: space-evenly;
     display: flex;
     flex-direction: row;
     gap:50px;
-   
- 
- 
- }
+   }
  #description{
 margin-top: 10px;
 max-width: 1000px;
@@ -452,7 +448,7 @@ perspective: 1000px;
     display: flex;
     flex-direction: column;
     height: 90%;
-    width: 50%;
+    width: fit-content;
 
  
  
@@ -499,6 +495,9 @@ width: fit-content;
     gap:20px;
    
  }
+ 
+
+
  .row1,.row2, .row3{
     display: flex;
    justify-content: space-between;
@@ -508,6 +507,7 @@ width: fit-content;
  
  
  .javascript, .java, .sql, .html, .css, .nodejs, .aws, .photoshop{
+
     text-align: center;
     font-family: 'Orbitron', sans-serif;
     color:rgb(153, 246, 13);
@@ -517,7 +517,7 @@ width: fit-content;
     cursor: pointer;
     perspective: 1000px;
     transform-style: preserve-3d;
-    padding: 20px;
+    
     border-radius: 10px;
     box-shadow: 
         0 10px 20px rgba(0,0,0,0.1),
@@ -527,16 +527,24 @@ width: fit-content;
     position: relative;
     overflow: hidden;
 
+    display: flex;
+    justify-content: center;  
+    align-items: center;     
+    padding: 10px 20px;      
+    font-size: 16px;        
+    text-align: center;      
+    background-color: #f8f8f8;
+   cursor: pointer;  
+    border-radius: 5px;      
+    width: auto;        
    
  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(78,169,212,1) 49%, rgb(16, 199, 132) 99%, rgb(12, 60, 35) 100%);
  
  
     transition: background-color 0.3s ease;
  }
- .javascript:hover, .java:hover, .sql:hover, .html:hover, .css:hover, .nodejs:hover, .aws:hover, .photoshop:hover {
-    background: linear-gradient(90deg, rgba(101, 48, 146, 1) 0%, rgba(58, 139, 194, 1) 49%, rgba(15, 219, 125, 1) 99%, rgba(50, 215, 138, 1) 100%); /* Darker gradient */
-    transform: translateY(-2px);
- }
+ 
+
  #certifications{
  display: flex;
  flex-direction: column;
@@ -578,22 +586,8 @@ width: fit-content;
     justify-content: space-between;
     gap:10px;
  }
- .polisci, .compsci, .cloud{
-    text-align: center;
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 550;
-    height:fit-content;
-    width: fit-content;
-    cursor: pointer;
-    color:greenyellow;
 
-   
- background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(78,169,212,1) 49%, rgba(29,253,169,1) 99%, rgba(69,252,153,1) 100%);
- }
- .polisci:hover, .compsci:hover, .cloud:hover{
-    background: linear-gradient(90deg, rgba(101, 48, 146, 1) 0%, rgba(58, 139, 194, 1) 49%, rgba(15, 219, 125, 1) 99%, rgba(50, 215, 138, 1) 100%); /* Darker gradient */
-    transform: translateY(-2px);
- }
+
  .polisci, .compsci, .cloud{
     text-align: center;
     font-family: 'Orbitron', sans-serif;
@@ -618,24 +612,65 @@ width: fit-content;
     background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(78,169,212,1) 49%, rgb(16, 199, 132) 99%, rgb(12, 60, 35) 100%);
  }
 
- .polisci:hover, .compsci:hover, .cloud:hover{
-    background: linear-gradient(90deg, rgba(101, 48, 146, 1) 0%, rgba(58, 139, 194, 1) 49%, rgba(15, 219, 125, 1) 99%, rgba(50, 215, 138, 1) 100%); /* Darker gradient */
-    transform: translateY(-2px);
- }
  
- .javascript, .java, .sql, .html, .css, .nodejs, .aws, .photoshop, .polisci, .compsci, .cloud {
-    display: flex;
-    justify-content: center;  
-    align-items: center;     
-    padding: 10px 20px;      
-    font-size: 16px;        
-    text-align: center;      
-    border: 1px solid #ccc;  
-    background-color: #f8f8f8;
-    cursor: pointer;       
-    border-radius: 5px;      
-    width: auto;              
+ button {
+   position: relative; /* Establish positioning context for tooltips */
+   z-index: 1; /* Ensure it's above other elements */
 }
+
+/* Tooltip */
+button::after {
+   content: attr(data-tooltip); /* Fetch content from the data-tooltip attribute */
+   position: absolute;
+   bottom: 125%; /* Position above the button */
+   left: 50%;
+   transform: translateX(-50%);
+   background: rgba(0, 0, 0, 0.85); /* Dark semi-transparent background */
+   color: #fff; /* White text */
+   font-size: 0.9rem;
+   padding: 8px 12px;
+   border-radius: 5px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+   white-space: nowrap;
+   opacity: 0; /* Initially hidden */
+   visibility: hidden; /* Initially hidden */
+   pointer-events: none; /* Prevent hover flicker */
+   z-index: 10; /* Ensure tooltip appears above other elements */
+   transition: opacity 0.3s ease-in-out;
+}
+
+/* Tooltip arrow */
+button::before {
+   content: '';
+   position: absolute;
+   bottom: 115%; /* Align with tooltip placement */
+   left: 50%;
+   transform: translateX(-50%);
+   border: 6px solid transparent;
+   border-top-color: rgba(0, 0, 0, 0.85); /* Match tooltip background */
+   opacity: 0; /* Initially hidden */
+   visibility: hidden; /* Initially hidden */
+   pointer-events: none;
+   z-index: 9; /* Slightly below tooltip content */
+   transition: opacity 0.3s ease-in-out;
+}
+
+/* Show tooltip on hover */
+button:hover::after,
+button:hover::before {
+   opacity: 1; /* Make visible */
+   visibility: visible; /* Ensure it's displayed */
+}
+
+/* Prevent flickering by increasing hover area */
+button:hover {
+   z-index: 2; /* Lift the button above its surroundings for better hover consistency */
+}
+
+
+
+
+
 
 
 #itbuttonrows {
@@ -698,7 +733,7 @@ width: fit-content;
     rotateX(0deg)
     rotateY(45deg);
     font-size: 2.5rem;
-    margin-top:-15px;
+    margin-top:-8px;
     font-weight: 520;
     color: rgb(255, 255, 255);
     font-family: 'Orbitron', sans-serif;
@@ -769,6 +804,7 @@ align-items: center;
     height:65%;
     width:80%;
     gap:20px;
+      justify-content: space-evenly;
    
    
  }
@@ -985,7 +1021,7 @@ background-size: cover;
   display: flex;
   flex-direction: row;
   align-items: center;
-   justify-content: center;
+   justify-content: space-evenly;
  gap:100px;
   margin-right: 60px;
  }
@@ -1162,7 +1198,7 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
  height:50%;
  width: 100%;
  max-width: 500px;
- min-width: 150px;
+ min-width: 200px;
  }
  .subjecttitle{
     font-family: 'Orbitron', sans-serif;
@@ -1180,6 +1216,7 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
  width: 100%;
  background-color: white;
  max-width: 500px;
+ min-width: 200px;
  }
  .messagetitle{
     font-family: 'Orbitron', sans-serif;
@@ -1214,6 +1251,7 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
     display: flex;
     flex-direction: column;
     height:100svh;
+    width: fit-content;
     align-items: center;
     background-image: url(Services.png);
     background-size: cover;
