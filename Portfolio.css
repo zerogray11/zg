@@ -1543,5 +1543,84 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
  }
  
  
+/* Mobile Adjustments */
+@media screen and (max-width: 768px) {
+   #boxIntro,
+   #boxAbout,
+   #serviceBoxes,
+   #projectsbox,
+   #boxContact {
+     min-height: 100vh; /* Ensure sections take up full screen height */
+   }
  
+   /* Add spacing between sections to prevent overlap */
+   #boxIntro,
+   #boxAbout,
+   #serviceBoxes,
+   #projectsbox,
+   #boxContact {
+     margin-bottom: 2rem;
+   }
  
+   /* Adjust padding inside sections for better readability */
+   #boxIntro p,
+   #boxAbout p,
+   #projectsbox p,
+   #boxContact p {
+     padding: 1rem;
+   }
+ }
+/* Mobile Adjustments */
+@media screen and (max-width: 768px) {
+   h1, h2, h3 {
+     font-size: 1.5rem; /* Adjust text size to fit better on smaller screens */
+     padding: 0.5rem 1rem;
+   }
+ 
+   #boxName {
+     font-size: 1.25rem; /* Adjust font size for smaller screens */
+     padding: 1rem;
+   }
+ 
+   /* More room for buttons on mobile */
+   .btn-intro {
+     width: 100%;
+     max-width: 300px;
+     margin: 1rem auto;
+   }
+ }
+/* Mobile Adjustments */
+@media screen and (max-width: 768px) {
+   #serviceBoxes {
+     grid-template-columns: 1fr; /* Stack service boxes on mobile */
+   }
+ 
+   #projectsbox {
+     flex-direction: column;
+     padding: 1rem;
+   }
+ 
+   .project1, .project2, .project3, .project4 {
+     width: 100%;
+     height: auto; /* Adjust height of projects for better mobile fit */
+   }
+ 
+   /* Ensure contact boxes are well-spaced on mobile */
+   #connect,
+   #writingboxes {
+     padding: 1rem 0;
+     width: 100%;
+   }
+ }
+/* Mobile Adjustments */
+@media screen and (max-width: 768px) {
+   /* Add margin between sections for better spacing */
+   #boxIntro,
+   #boxAbout,
+   #serviceBoxes,
+   #projectsbox,
+   #boxContact {
+     margin-bottom: 3rem; /* Adjust spacing between sections */
+   }
+ }
+    
