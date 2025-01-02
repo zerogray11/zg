@@ -10,7 +10,7 @@ function checkScroll(){
 }
 window.addEventListener('scroll',checkScroll);
 
-document.querySelectorAll('.javascript, .java, .sql, .html, .css, .nodejs, .aws, .photoshop, .polisci, .compsci, .cloud, .sendmessage, .btn-intro').forEach(button => {
+/*document.querySelectorAll('.javascript, .java, .sql, .html, .css, .nodejs, .aws, .photoshop, .polisci, .compsci, .cloud, .sendmessage, .btn-intro').forEach(button => {
     button.addEventListener('mouseenter', () => {
         button.style.transform = 'scale(1.1)';
         button.style.transition = 'transform 0.3s ease-in-out';
@@ -48,12 +48,61 @@ document.addEventListener('DOMContentLoaded', () => {
                 box.style.boxShadow = 'none';
             });
         });
-    }
+    } 
 
     // Call functions to add interactivity
     
     addHoverEffects();
+});*/
+// Add this to your Portfolio.js
+document.addEventListener('DOMContentLoaded', function() {
+    // Create tooltip element
+    const tooltip = document.createElement('div');
+    tooltip.style.cssText = `
+        position: fixed;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 8px;
+        border-radius: 4px;
+        font-size: 14px;
+        font-family: 'Orbitron', sans-serif;
+        pointer-events: none;
+        z-index: 10000;
+        display: none;
+        white-space: nowrap;
+    `;
+    document.body.appendChild(tooltip);
+
+    // Add event listeners to buttons
+    const buttons = document.querySelectorAll('[data-tooltip]');
+    
+    buttons.forEach(button => {
+        button.addEventListener('mouseenter', e => {
+            const tooltipText = button.getAttribute('data-tooltip');
+            tooltip.textContent = tooltipText;
+            tooltip.style.display = 'block';
+            
+            // Position the tooltip above the button
+            const rect = button.getBoundingClientRect();
+            tooltip.style.left = rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2) + 'px';
+            tooltip.style.top = rect.top - tooltip.offsetHeight - 10 + 'px';
+        });
+
+        button.addEventListener('mouseleave', () => {
+            tooltip.style.display = 'none';
+        });
+
+        // Update tooltip position on button scale
+        button.addEventListener('mousemove', e => {
+            if (tooltip.style.display === 'block') {
+                const rect = button.getBoundingClientRect();
+                tooltip.style.left = rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2) + 'px';
+                tooltip.style.top = rect.top - tooltip.offsetHeight - 10 + 'px';
+            }
+        });
+    });
 });
+
 
 document.addEventListener('DOMContentLoaded', () => {
     // Select all elements to animate
@@ -130,4 +179,5 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(container);
     });
 });
+ 
 

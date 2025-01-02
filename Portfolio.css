@@ -639,65 +639,6 @@ width: fit-content;
     background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(78,169,212,1) 49%, rgb(16, 199, 132) 99%, rgb(12, 60, 35) 100%);
  }
 
- 
- button {
-   position: relative; /* Establish positioning context for tooltips */
-   z-index: 1; /* Ensure it's above other elements */
-}
-
-/* Tooltip */
-button::after {
-   content: attr(data-tooltip); /* Fetch content from the data-tooltip attribute */
-   position: absolute;
-   bottom: 125%; /* Position above the button */
-   left: 50%;
-   transform: translateX(-50%);
-   background: rgba(0, 0, 0, 0.85); /* Dark semi-transparent background */
-   color: #fff; /* White text */
-   font-size: 0.9rem;
-   padding: 8px 12px;
-   border-radius: 5px;
-   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-   white-space: nowrap;
-   opacity: 0; /* Initially hidden */
-   visibility: hidden; /* Initially hidden */
-   pointer-events: none; /* Prevent hover flicker */
-   z-index: 10; /* Ensure tooltip appears above other elements */
-   transition: opacity 0.3s ease-in-out;
-}
-
-/* Tooltip arrow */
-button::before {
-   content: '';
-   position: absolute;
-   bottom: 115%; /* Align with tooltip placement */
-   left: 50%;
-   transform: translateX(-50%);
-   border: 6px solid transparent;
-   border-top-color: rgba(0, 0, 0, 0.85); /* Match tooltip background */
-   opacity: 0; /* Initially hidden */
-   visibility: hidden; /* Initially hidden */
-   pointer-events: none;
-   z-index: 9; /* Slightly below tooltip content */
-   transition: opacity 0.3s ease-in-out;
-}
-
-/* Show tooltip on hover */
-button:hover::after,
-button:hover::before {
-   opacity: 1; /* Make visible */
-   visibility: visible; /* Ensure it's displayed */
-}
-
-/* Prevent flickering by increasing hover area */
-button:hover {
-   z-index: 2; /* Lift the button above its surroundings for better hover consistency */
-}
-
-
-
-
-
 
 
 #itbuttonrows {
@@ -1600,6 +1541,7 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
      display: none;
    }
  }
+ 
  
  
  
