@@ -1412,6 +1412,7 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
        padding: 0 1rem;
        width: 100%;
        overflow-x: hidden;
+       min-height: fit-content;
    }
 
    /* Section spacing and heights */
@@ -1420,11 +1421,10 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
    #serviceBoxes,
    #projectsbox,
    #boxContact {
-       min-height: 100vh;
-       padding: 2rem 0;
-       margin-bottom: 0;
-       display: flex;
-       flex-direction: column;
+       min-height: fit-content;
+       height: auto;
+       padding: 4rem 0;
+       margin-bottom: 2rem;
    }
 
    /* Content padding and alignment */
@@ -1432,7 +1432,7 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
    #boxAbout p,
    #projectsbox p,
    #boxContact p {
-       padding: 1rem;
+       padding: 2rem;
        max-width: 100%;
        margin: 0 auto;
    }
@@ -1440,41 +1440,28 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
    /* Service boxes grid */
    #serviceBoxes {
        grid-template-columns: 1fr;
-       gap: 1.5rem;
-       padding: 1rem;
+       gap: 2rem;
+       padding: 2rem;
    }
 
    /* Project layouts */
    .project1, .project2, .project3, .project4 {
        width: 100%;
-       min-height: 250px;
-       margin-bottom: 2rem;
+       min-height: 300px;
+       margin-bottom: 3rem;
    }
 
    /* Contact section */
    #connect,
    #writingboxes {
-       padding: 1.5rem;
+       padding: 2rem;
        width: 100%;
-       max-width: 500px;
        margin: 0 auto;
    }
 
    /* Typography scaling */
-   h1 { font-size: 2rem; }
-   h2 { font-size: 1.75rem; }
-   h3 { font-size: 1.5rem; }
-   
-   #boxName {
-       font-size: 1.5rem;
-       padding: 1.5rem 1rem;
-   }
-
-   /* Button improvements */
-   .btn-intro {
-       width: 90%;
-       max-width: 300px;
-       margin: 1rem auto;
-       display: block;
+   h1, h2, h3 {
+       padding: 1rem;
+       margin: 1rem 0;
    }
 }

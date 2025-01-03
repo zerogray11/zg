@@ -10,23 +10,7 @@ function checkScroll(){
 }
 window.addEventListener('scroll',checkScroll);
 
-/*document.querySelectorAll('.javascript, .java, .sql, .html, .css, .nodejs, .aws, .photoshop, .polisci, .compsci, .cloud, .sendmessage, .btn-intro').forEach(button => {
-    button.addEventListener('mouseenter', () => {
-        button.style.transform = 'scale(1.1)';
-        button.style.transition = 'transform 0.3s ease-in-out';
-    });
-    button.addEventListener('mouseleave', () => {
-        button.style.transform = 'scale(1)';
-    });
 
-    // Add click effect
-    button.addEventListener('click', () => {
-        button.style.transform = 'scale(0.95)';
-        setTimeout(() => {
-            button.style.transform = 'scale(1)';
-        }, 100);
-    });
-});
 
 document.addEventListener('DOMContentLoaded', () => {
     // Service descriptions
@@ -53,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Call functions to add interactivity
     
     addHoverEffects();
-});*/
+});
 // Add this to your Portfolio.js
 document.addEventListener('DOMContentLoaded', function() {
     // Create tooltip element
@@ -200,3 +184,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// Select all elements with the 'data-tooltip' attribute
+const tooltipElements = document.querySelectorAll('[data-tooltip]');
+
+// Loop through each element and update its tooltip content
+tooltipElements.forEach(tooltipElement => {
+  const originalText = tooltipElement.getAttribute('data-tooltip');
+  const formattedText = originalText.replace(/,/g, ',\n'); // Replace commas with commas + newlines
+  tooltipElement.setAttribute('data-tooltip', formattedText);
+});
