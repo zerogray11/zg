@@ -206,3 +206,52 @@ document.addEventListener("DOMContentLoaded", () => {
             });
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const text = "Hey there! I'm Zero!";
+    const element = document.querySelector('.hey');
+    element.textContent = ''; // Clear any pre-existing text
+
+    let charIndex = 0;
+    let cursorVisible = true;
+
+    // Create cursor element
+    const cursor = document.createElement('span');
+    cursor.textContent = '|';
+    cursor.style.marginLeft = '2px';
+    element.appendChild(cursor);
+
+    // Type text
+    function typeText() {
+        if (charIndex < text.length) {
+            element.insertBefore(
+                document.createTextNode(text[charIndex]),
+                cursor
+            );
+            charIndex++;
+            setTimeout(typeText, 100); // Adjust speed here
+        } else {
+            setTimeout(resetAnimation, 3000); // Restart after a delay
+        }
+    }
+
+    // Blink cursor
+    function blinkCursor() {
+        cursorVisible = !cursorVisible;
+        cursor.style.opacity = cursorVisible ? '1' : '0';
+    }
+
+    // Reset animation
+    function resetAnimation() {
+        charIndex = 0;
+        element.textContent = ''; // Clear all text
+        element.appendChild(cursor); // Add cursor back
+        typeText(); // Restart typing
+    }
+
+    // Start typing
+    typeText();
+
+    // Start cursor blinking
+    setInterval(blinkCursor, 500); // Adjust blink speed here
+});
+

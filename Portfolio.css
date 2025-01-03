@@ -1,10 +1,15 @@
+body, html {
+   margin: 0;
+   padding: 0;
+   height: 100%;
+}
 
 
 #boxHome{
  
     display:flex;
     flex-direction:column;
-    height:100svh;
+    height:100vh;
     background-color:grey;
     overflow: hidden;
     align-items: center;
@@ -34,7 +39,7 @@
  flex-direction: column;
 align-items: center;
 justify-content: space-between;
- background-color: rgba(255, 255, 255, 0.6);
+ background-color: rgba(255, 255, 255, 0.9);
  margin: 0 auto;
     width: 90%;
     min-height: fit-content; /* Allows height to grow with content */
@@ -56,57 +61,27 @@ justify-content: space-between;
  
  
 
- .hey{
-   margin-top: 5px !important;
-  
-    font-size: 1.5rem !important;
-    font-family: "Roboto Mono", serif;
-    font-weight: 500;
-    
-    width: 0;
-    
-    display: inline-block;
-    white-space:nowrap;
-    position: relative;
-    animation: typing 2s steps(30, end) forwards;
-    animation-delay: 0.5s;}
-    
- .hey::after{
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 0.1em;
-    height: 100%;
-    background-color: black;
-    animation: blink 0.5s step-end infinite;
- }
- 
- p{
-font-family: "Roboto Mono", serif;
-color: black;
-width: 90%;
-margin-top: 20px;
-margin-left: 40px;
-text-indent: 20px;
- font-size: 1rem;
-font-weight: 500;
- }
+ .hey {
+   font-size: 1.5rem;
+   font-family: "Roboto Mono", serif;
+   font-weight: 500;
+   display: inline-block;
+   position: relative;
+   padding-right: 5px; /* Add space for cursor */
+}
 
 
 
-@keyframes typing {
-    from { width: 0 }
-    to { width: max-content }
-  }
-  @keyframes blink {
-    50% {
-      background-color: transparent; 
-    }
-    100% {
-      background-color: black; 
-    }
-  }
+p {
+   font-family: "Roboto Mono", serif;
+   color: black;
+   width: 90%;
+   margin-top: 20px;
+   margin-left: 40px;
+   text-indent: 20px;
+   font-size: 1rem;
+   font-weight: 500;
+}
  
  
   
@@ -177,6 +152,7 @@ font-weight: 500;
     flex-direction: row;
     width:100%;
    justify-content: space-between;
+   margin-top: 10px;
  }
  
  
@@ -229,7 +205,11 @@ font-weight: 500;
     display: flex;
     flex-direction: row;
     z-index: 10;
-   
+    
+    background-color:rgba(183, 186, 190, 0.9);
+    border-radius: 50%;
+    margin-right: 10px;
+    padding: 7px;
  }
  .Home, .About, .Projects, .Services, .Contact {
     font-size: 0.7rem;
@@ -1016,12 +996,14 @@ gap: 20px;
  #connect{
    margin-top: 100px;
    background: linear-gradient(to right, rgba(255, 105, 180, 1), rgba(65, 105, 225, 1));
-    height:max-content;
-    width:max-content;
+    height:fit-content;
+    width:fit-content;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    border-radius: 20%;
+    border: white 1px solid;
   
  }
  
@@ -1417,8 +1399,9 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
 
    #boxIntro {
        width: 95%; /* Reduce width to fit smaller screens */
-       padding: 15px;
+       padding: 10px;
        gap: 5px;
+margin-bottom: 30px;
    }
 
    .hey {
@@ -1435,13 +1418,26 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
        width: 150px; /* Smaller button */
        height: 35px;
        font-size: 14px;
-       margin: 10px auto; /* Center buttons */
+       margin: 10px auto; 
+       padding: 10px;/* Center buttons */
+       border: white 3px solid;
+   }
+   #boxTopBar{
+      background-color:rgba(183, 186, 190, 0.9);
+      margin-bottom: 20px;
+      margin-top: 20px;
+      border-radius: 100%;
+      padding: 0px;
+    
    }
 
    #boxInfo {
+      margin-top: 10px;
        flex-direction: column; /* Stack items vertically */
        align-items: center;
        gap: 20px; /* Adjust gaps */
+       
+       
    }
 
    #boxIcons {
@@ -1450,6 +1446,7 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
    }
 
    #boxName {
+       margin-top: 20px;
        font-size: 1rem; /* Reduce font size */
        padding: 5px;
        background-color: white;
@@ -1459,6 +1456,7 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
    .Home, .About, .Projects, .Services, .Contact {
        font-size: 0.6rem; /* Smaller font for menu items */
        padding: 18px; /* Reduce padding */
+       
    }
 
    .hidden-box {
@@ -1497,9 +1495,10 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
    }
 
    #aboutTitle {
-       height: auto; /* Allow flexible height */
+       height: fit-content; /* Allow flexible height */
        padding: 15px;
        gap: 10px; /* Reduce gap for smaller screens */
+       border-radius: 20px;
    }
 
    .about {
@@ -1547,7 +1546,10 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
    .javascript, .java, .sql, .html, .css, .nodejs, .aws, .photoshop {
        font-size: 0.8rem; /* Smaller font size */
        padding: 10px; /* Adjust padding for smaller buttons */
+       margin-left:20px;
    }
+   .polisci, .compsci, .cloud{
+      margin-left:29px;}
 
    #certifications {
        flex-direction: column; /* Stack certifications vertically */
@@ -1653,9 +1655,11 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
        background-color: rgb(50, 116, 144); /* Keep the background color */
        text-shadow: 1px 1px 0 #fff8f8, 2px 2px 0 #ffffff, 3px 3px 0 #ccc; /* Keep text-shadow */
    }
+   .projectstitle{
+      font-size:2.5rem;}
 
    .projectsubtitle {
-       font-size: 1rem; /* Reduce font size */
+       font-size: 1.5rem; /* Reduce font size */
        padding: 15px; /* Adjust padding */
        background-color: rgb(50, 116, 144); /* Keep background color */
        margin-top: -10px;
@@ -1675,12 +1679,14 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
        width: 90%; /* Make boxes full-width */
        gap: 20px;
    }
+   .projectsubtitle {
+      margin-top: 20px;}
 
    .project1, .project2, .project3, .project4 {
        display: block; /* Change from flex to block for easier stacking */
        width: 100%; /* Full width */
        height: 250px; /* Flexible height */
-       padding: 20px;
+       padding: 10px;
        margin-top: 20px; /* Add spacing */
        border-radius: 10%; /* Adjust border-radius */
        background-size: cover;
