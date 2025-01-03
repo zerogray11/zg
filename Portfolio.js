@@ -180,4 +180,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
  
+// Include EmailJS SDK
+document.addEventListener("DOMContentLoaded", () => {
+    emailjs.init("zerogray11@gmail.com"); // Replace with your EmailJS user ID
+
+    const contactForm = document.getElementById("contactForm");
+
+    contactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        emailjs.sendForm("service_6m5jupq", "template_es1te7g", contactForm)
+            .then(() => {
+                alert("Message sent successfully!");
+                contactForm.reset();
+            })
+            .catch((error) => {
+                alert("Error sending message: " + error.text);
+            });
+    });
+});
 

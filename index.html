@@ -156,15 +156,15 @@ I aim to deliver seamless experiences, ensuring that designs are not only visual
        </div>
        <div id="projectsbox" class="projectsbox">
            <div id="projectsbox1" class="projectsbox1">
-               <div id="project1" class="project1">
+               <div id="project1" class="project1" data-tooltip="Canva Design for an online food market">
                    <a href="https://www.canva.com/design/DAGSWoOECpA/L22hKdwcwaejZKEThZvOVA/edit" target="_blank" class="project-link">
                    </a>
                </div>
-               <div id="project2" class="project2"></div>
+               <div id="project2" class="project2" data-tooltip="Fitness Calorie Tracker"></div>
            </div>
            <div id="projectsbox2" class="projectsbox2">
-               <div id="project3" class="project3"></div>
-               <div id="project4" class="project4"></div>
+               <div id="project3" class="project3" data-tooltip="HTML and CSS design for Dog Dating Site "></div>
+               <div id="project4" class="project4" data-tooltip="My Portfolio designed using HTML, CSS, JavaScript and Photoshop"></div>
            </div>
        </div>
    </div>
@@ -194,22 +194,23 @@ I aim to deliver seamless experiences, ensuring that designs are not only visual
                </div>
            </div>
            <div id="writingboxes">
-               <div class="Emailbox">
-                   <h3 class="boxemailtitle">Email</h3>
-                   <textarea id="emailboxwrite" class="emailboxwrite" placeholder="your email here"></textarea>
-               </div>
-               <div id="subjectbox" class="Subjectbox">
-                   <h3 class="subjecttitle">Subject</h3>
-                   <textarea class="subjectboxwrite" placeholder="subject here"></textarea>
-               </div>
-               <div id="messagebox" class="Messagebox">
-                   <h3 class="messagetitle">Message</h3>
-                   <textarea id="messagewritebox" class="messageboxwrite" placeholder="your message..."></textarea>
-               </div>
-               <button class="sendmessage">Send Message</button>
-           </div>
-       </div>
-       </div>
+            <form id="contactForm">
+                <div class="Emailbox">
+                    <h3 class="boxemailtitle">Email</h3>
+                    <textarea id="emailboxwrite" class="emailboxwrite" name="email" placeholder="your email here" required></textarea>
+                </div>
+                <div id="subjectbox" class="Subjectbox">
+                    <h3 class="subjecttitle">Subject</h3>
+                    <textarea class="subjectboxwrite" name="subject" placeholder="subject here" required></textarea>
+                </div>
+                <div id="messagebox" class="Messagebox">
+                    <h3 class="messagetitle">Message</h3>
+                    <textarea id="messagewritebox" class="messageboxwrite" name="message" placeholder="your message..." required></textarea>
+                </div>
+                <button type="submit" class="sendmessage">Send Message</button>
+            </form>
+        </div>
+         </div>        
        
 
 

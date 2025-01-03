@@ -228,6 +228,7 @@ font-weight: 500;
  #boxTopBar{
     display: flex;
     flex-direction: row;
+    z-index: 10;
    
  }
  .Home, .About, .Projects, .Services, .Contact {
@@ -651,7 +652,7 @@ width: fit-content;
  
  
  #boxProjects{
-    height:100svh;
+    height:120svh;
     background-image: url(upsidedown.jpeg);
     background-size: cover;
     background-position: 0 0;
@@ -796,6 +797,19 @@ align-items: center;
  
  
  }
+ .project1, .project2, .project3, .project4 {
+   display: flex;
+   justify-content: center; /* Horizontally center */
+   align-items: center;     /* Vertically center */
+   height: 100%;            /* Ensure container takes full height */
+   width: 100%;             /* Ensure container takes full width */
+ }
+ 
+ .project1 img, .project2 img, .project3 img, .project4 img {
+   max-width: 100%;         /* Scale the image to fit */
+   max-height: 100%;        /* Prevent overflow */
+ }
+ 
  .project1 {
     transform-style: preserve-3d;
     padding: 20px;
@@ -886,10 +900,12 @@ align-items: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 4px solid rgb(50, 116, 144,0.6) !important;
     border-radius: 20% !important;
+   z-index: 1;
  }
  .project3:hover{
     transform: translateY(-10px) rotateY(5deg) rotateX(5deg)!important;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2)!important;
+    z-index: 1000;
  }
  .project4{
     animation: border-glow 0.5s ease-in-out infinite;
@@ -913,6 +929,7 @@ align-items: center;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    
  }
  .project4:hover{
     transform: translateY(-10px) rotateY(5deg) rotateX(5deg)!important;
@@ -923,7 +940,7 @@ align-items: center;
  
  
  #boxContact{
- height:115svh;
+ height:fit-content;
  background-image: url(glacier.jpeg);
 background-size: cover;
  display: flex;
