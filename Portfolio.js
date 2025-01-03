@@ -116,25 +116,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
  
-// Include EmailJS SDK
-document.addEventListener("DOMContentLoaded", () => {
-    emailjs.init("zerogray11@gmail.com"); // Replace with your EmailJS user ID
-
-    const contactForm = document.getElementById("contactForm");
-
-    contactForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        emailjs.sendForm("service_6m5jupq", "template_es1te7g", contactForm)
-            .then(() => {
-                alert("Message sent successfully!");
-                contactForm.reset();
-            })
-            .catch((error) => {
-                alert("Error sending message: " + error.text);
-            });
-    });
-});
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -191,5 +172,37 @@ document.addEventListener('DOMContentLoaded', function() {
                 tooltip.style.top = rect.top - tooltip.offsetHeight - 10 + 'px';
             }
         });
+    });
+});
+document.addEventListener("DOMContentLoaded", () => {
+    // Initialize EmailJS with your User ID
+    emailjs.init("adp9dP0AyFPViAyRp"); // Replace with your EmailJS user ID
+
+    // Get the form element
+    const contactForm = document.getElementById("contactForm");
+    
+    // Debugging to see if form is properly selected
+    console.log(contactForm); 
+
+    // Handle form submission
+    contactForm.addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission behavior
+        
+        // Debugging form values to ensure data is correct
+        const formData = new FormData(contactForm);
+        for (let [key, value] of formData.entries()) {
+            console.log(`${key}: ${value}`);
+        }
+
+        // Send form data using EmailJS
+        emailjs.sendForm("service_6m5jupq", "template_1mnqqfr", contactForm)
+            .then(() => {
+                alert("Message sent successfully!"); // Success alert
+                contactForm.reset(); // Reset form fields
+            })
+            .catch((error) => {
+                alert("Error sending message: " + error.text); // Error alert
+                console.error(error); // Log error for debugging
+            });
     });
 });
