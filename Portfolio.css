@@ -1410,7 +1410,7 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
    #boxHome {
        flex-direction: column;
        height: auto; /* Adjust height for smaller screens */
-       gap: 20%; /* Reduce gaps for better spacing */
+       gap: 50%; /* Reduce gaps for better spacing */
        padding: 10px;
        background-size: contain; /* Optimize background size */
    }
@@ -1422,7 +1422,7 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
    }
 
    .hey {
-       font-size: 1.2rem !important; /* Smaller font for titles */
+       font-size: 1rem !important; /* Smaller font for titles */
    }
 
    p {
@@ -1441,7 +1441,7 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
    #boxInfo {
        flex-direction: column; /* Stack items vertically */
        align-items: center;
-       gap: 10px; /* Adjust gaps */
+       gap: 20px; /* Adjust gaps */
    }
 
    #boxIcons {
@@ -1452,11 +1452,13 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
    #boxName {
        font-size: 1rem; /* Reduce font size */
        padding: 5px;
+       background-color: white;
+       
    }
 
    .Home, .About, .Projects, .Services, .Contact {
        font-size: 0.6rem; /* Smaller font for menu items */
-       padding: 5px; /* Reduce padding */
+       padding: 18px; /* Reduce padding */
    }
 
    .hidden-box {
