@@ -285,7 +285,7 @@ p {
     }
   }
   #boxAbout{
-    height:100vh;
+    height:120vh;
     
     display: flex;
     flex-direction: column;
@@ -1417,7 +1417,7 @@ margin-bottom: 30px;
 
    .btn-intro {
        width: 150px; /* Smaller button */
-       height: 35px;
+       height: fit-content;
        font-size: 14px;
        margin: 10px auto; 
        padding: 10px;/* Center buttons */
@@ -1582,7 +1582,7 @@ margin-bottom: 30px;
    }
 
    .ServicesTitle {
-       font-size: 1.8rem; /* Reduce font size for smaller screens */
+       font-size: 2.5rem; /* Reduce font size for smaller screens */
        margin-top: 20px; /* Adjust spacing */
    }
 
@@ -1590,22 +1590,27 @@ margin-bottom: 30px;
        flex-direction: column; /* Stack services vertically */
        gap: 20px; /* Add spacing between stacked items */
        width: 100%;
+       margin-bottom: 20px;
    }
 
    .Backendservice,
    .Frontendservice,
    .programManagementService,
    .onlineMarketingservice {
+
        width: 90%; /* Make service boxes full-width */
        height: auto; /* Allow flexible height */
-       padding: 10px;
+       padding: 30px;
+       margin-top: 15px;
+       margin-bottom: 15px;
    }
 
    .backendtitle,
    .frontendtitle,
    .pmtitle,
    .omtitle {
-       font-size: 1rem; /* Reduce font size */
+      margin-top: 20px;
+       font-size: 1.5rem; /* Reduce font size */
        margin-bottom: 10px; /* Add spacing below titles */
    }
 
