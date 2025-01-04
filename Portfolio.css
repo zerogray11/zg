@@ -767,7 +767,7 @@ align-items: center;
     flex-direction: column;
     height:100%;
     width:50%;
-    gap:25px
+    gap:35px
   
  
  
@@ -777,14 +777,14 @@ align-items: center;
     flex-direction: column;
     height: 100%;
     width:50%;
-    gap:25px;
+    gap:35px;
    
  
  
  }
  .project1, .project2, .project3, .project4 {
    display: flex;
-   justify-content: center; /* Horizontally center */
+   justify-content: center;/* Horizontally center */
    align-items: center;     /* Vertically center */
    height: 100%;            /* Ensure container takes full height */
    width: 100%;             /* Ensure container takes full width */
@@ -1646,92 +1646,92 @@ margin-bottom: 30px;
 }
 @media (max-width: 768px) {
    #boxProjects {
-       height: auto; /* Allow flexible height */
-       padding: 20px; /* Add padding for spacing */
-       background-size: cover;
-       background-position: center;
-       animation: none; /* Remove animation for better performance */
-   }
+      height: auto; /* Allow flexible height */
+      padding: 20px; /* Add padding for spacing */
+      background-size: cover;
+      background-position: center;
+      animation: none; /* Remove animation for better performance */
+  }
 
-   .projectstitlebox {
-       height: auto; /* Allow flexible height */
-       padding: 20px;
-       gap: 10px;
-       background-color: rgba(119, 181, 210, 0.1); /* Adjust background transparency */
-       box-shadow: none; /* Remove box-shadow for smaller screens */
-   }
+  .projectstitlebox {
+      height: auto; /* Allow flexible height */
+      padding: 20px;
+      gap: 10px;
+      background-color: rgba(119, 181, 210, 0.1); /* Adjust background transparency */
+      box-shadow: none; /* Remove box-shadow for smaller screens */
+  }
 
-   .projectstitle {
-       font-size: 1.8rem; /* Reduce font size for smaller screens */
-       padding: 20px;
-       margin-top: 10px; /* Adjust margin */
-       border-radius: 10px; /* Adjust border-radius */
-       background-color: rgb(50, 116, 144); /* Keep the background color */
-       text-shadow: 1px 1px 0 #fff8f8, 2px 2px 0 #ffffff, 3px 3px 0 #ccc; /* Keep text-shadow */
-   }
-   .projectstitle{
-      font-size:2.5rem;}
+  .projectstitle {
+      font-size: 1.8rem; /* Reduce font size for smaller screens */
+      padding: 20px;
+      margin-top: 10px; /* Adjust margin */
+      border-radius: 10px; /* Adjust border-radius */
+      background-color: rgb(50, 116, 144); /* Keep the background color */
+      text-shadow: 1px 1px 0 #fff8f8, 2px 2px 0 #ffffff, 3px 3px 0 #ccc; /* Keep text-shadow */
+  }
+  .projectstitle{
+     font-size:2.5rem;}
 
-   .projectsubtitle {
-       font-size: 1.5rem; /* Reduce font size */
-       padding: 15px; /* Adjust padding */
-       background-color: rgb(50, 116, 144); /* Keep background color */
-       margin-top: -10px;
-       box-shadow: none; /* Remove box-shadow */
-   }
+  .projectsubtitle {
+      font-size: 1.5rem; /* Reduce font size */
+      padding: 15px; /* Adjust padding */
+      background-color: rgb(50, 116, 144); /* Keep background color */
+      margin-top: -10px;
+      box-shadow: none; /* Remove box-shadow */
+  }
 
-   .projectsbox {
-       display: flex;
-       flex-direction: column; /* Stack project boxes vertically */
-       gap: 20px;
-       height: auto; /* Allow flexible height */
-       width: 100%; /* Full width */
-       justify-content: center; /* Center content */
-   }
+  .projectsbox {
+      display: flex;
+      flex-direction: column; /* Stack project boxes vertically */
+      gap: 20px;
+      height: auto; /* Allow flexible height */
+      width: 100%; /* Full width */
+      justify-content: center; /* Center content */
+  }
 
-   .projectsbox1, .projectsbox2 {
-       width: 90%; /* Make boxes full-width */
-       gap: 20px;
-   }
-   .projectsubtitle {
-      margin-top: 20px;}
+  .projectsbox1, .projectsbox2 {
+      width: 90%; /* Make boxes full-width */
+      gap: 30px;
+  }
+  .projectsubtitle {
+     margin-top: 20px;}
 
-   .project1, .project2, .project3, .project4 {
-       display: block; /* Change from flex to block for easier stacking */
-       width: 100%; /* Full width */
-       height: 250px; /* Flexible height */
-       padding: 10px;
-       margin-top: 20px; /* Add spacing */
-       border-radius: 10%; /* Adjust border-radius */
-       background-size: cover;
-       background-position: center;
-       box-shadow: none; /* Remove box-shadow */
-       cursor: pointer;
-       transition: transform 0.3s ease, box-shadow 0.3s ease;
-   }
+  .project1, .project2, .project3, .project4 {
+      display: block; /* Change from flex to block for easier stacking */
+      width: 100%; /* Full width */
+      height: 250px; /* Flexible height */
+      padding: 10px;
+      margin-top: 20px; /* Add spacing */
+      border-radius: 10%; /* Adjust border-radius */
+      background-size: cover;
+      background-position: center;
+      box-shadow: none; /* Remove box-shadow */
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
 
-   .project1 img, .project2 img, .project3 img, .project4 img {
-       max-width: 100%; /* Scale images to fit */
-       max-height: 100%; /* Prevent overflow */
-   }
+  .project1 img, .project2 img, .project3 img, .project4 img {
+      max-width: 100%; /* Scale images to fit */
+      max-height: 100%; /* Prevent overflow */
+  }
 
-   .project1:hover, .project2:hover, .project3:hover, .project4:hover {
-       transform: none; /* Remove 3D effects for better performance */
-       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Slight hover effect */
-   }
+  .project1:hover, .project2:hover, .project3:hover, .project4:hover {
+      transform: none; /* Remove 3D effects for better performance */
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Slight hover effect */
+  }
 
-   .project-link {
-       display: block;
-       height: 100%;
-       width: 100%;
-       text-decoration: none;
-   }
+  .project-link {
+      display: block;
+      height: 100%;
+      width: 100%;
+      text-decoration: none;
+  }
 
-   .projectsbox {
-       flex-direction: column; /* Stack the projects vertically */
-       gap: 10px;
-   }
-}
+  .projectsbox {
+      flex-direction: column; /* Stack the projects vertically */
+      gap: 10px;
+  }
+} 
 @media screen and (max-width: 768px) {
    #boxContact {
        min-height: 100vh;
