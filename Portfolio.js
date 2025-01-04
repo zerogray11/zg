@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
  
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const tooltip = document.createElement('div');
     tooltip.style.cssText = `
         position: fixed;
@@ -129,51 +129,41 @@ document.addEventListener('DOMContentLoaded', function() {
         font-size: 14px;
         font-family: 'Orbitron', sans-serif;
         pointer-events: none;
-        z-index: 10000;
+        z-index: 99999; /* Always on top */
         display: none;
         white-space: pre-wrap;
         text-align: left;
         max-width: 250px;
         line-height: 1.4;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     `;
     document.body.appendChild(tooltip);
 
     const buttons = document.querySelectorAll('[data-tooltip]');
-    
+
     buttons.forEach(button => {
-        button.addEventListener('mouseenter', e => {
+        button.addEventListener('mouseenter', () => {
             const tooltipText = button.getAttribute('data-tooltip');
-            const words = tooltipText.split(' ');
-            let formattedText = '';
-            
-            for(let i = 0; i < words.length; i++) {
-                formattedText += words[i] + ' ';
-                if((i + 1) % 4 === 0) {
-                    formattedText += '\n';
-                }
-            }
-            
-            tooltip.textContent = formattedText.trim();
+            tooltip.textContent = tooltipText;
             tooltip.style.display = 'block';
-            
+
             const rect = button.getBoundingClientRect();
-            tooltip.style.left = rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2) + 'px';
-            tooltip.style.top = rect.top - tooltip.offsetHeight - 10 + 'px';
+            tooltip.style.left = `${rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2)}px`;
+            tooltip.style.top = `${rect.top - tooltip.offsetHeight - 10}px`;
         });
 
         button.addEventListener('mouseleave', () => {
             tooltip.style.display = 'none';
         });
 
-        button.addEventListener('mousemove', e => {
-            if (tooltip.style.display === 'block') {
-                const rect = button.getBoundingClientRect();
-                tooltip.style.left = rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2) + 'px';
-                tooltip.style.top = rect.top - tooltip.offsetHeight - 10 + 'px';
-            }
+        button.addEventListener('mousemove', () => {
+            const rect = button.getBoundingClientRect();
+            tooltip.style.left = `${rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2)}px`;
+            tooltip.style.top = `${rect.top - tooltip.offsetHeight - 10}px`;
         });
     });
 });
+
 document.addEventListener("DOMContentLoaded", () => {
     // Initialize EmailJS with your User ID
     emailjs.init("adp9dP0AyFPViAyRp"); // Replace with your EmailJS user ID
@@ -255,3 +245,9 @@ document.addEventListener('DOMContentLoaded', function() {
     setInterval(blinkCursor, 500); // Adjust blink speed here
 });
 
+// Updated logic for animation reset
+if (entry.isIntersecting) {
+    entry.target.classList.add('animate-in');
+} else {
+    entry.target.classList.remove('animate-in');
+}
