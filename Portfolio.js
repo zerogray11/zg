@@ -39,34 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
     addHoverEffects();
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const projects = document.querySelectorAll('[data-tooltip]');
-
-    projects.forEach((project) => {
-        project.addEventListener('touchstart', () => {
-            // Show the tooltip
-            const tooltipText = project.getAttribute('data-tooltip');
-            const tooltip = document.createElement('div');
-            tooltip.className = 'tooltip';
-            tooltip.innerText = tooltipText;
-            document.body.appendChild(tooltip);
-
-            // Position the tooltip
-            const rect = project.getBoundingClientRect();
-            tooltip.style.left = `${rect.left + rect.width / 2}px`;
-            tooltip.style.top = `${rect.bottom + 10}px`;
-
-            // Remove the tooltip after a short delay or on next interaction
-            setTimeout(() => tooltip.remove(), 2000);
-        });
-
-        // Remove lingering tooltips when scrolling or interacting elsewhere
-        document.addEventListener('scroll', () => {
-            const lingeringTooltips = document.querySelectorAll('.tooltip');
-            lingeringTooltips.forEach((tooltip) => tooltip.remove());
-        });
-    });
-});
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -280,3 +252,50 @@ if (entry.isIntersecting) {
 } else {
     entry.target.classList.remove('animate-in');
 }
+document.addEventListener('DOMContentLoaded', () => {
+    const projects = document.querySelectorAll('[data-tooltip]');
+
+    // Function to remove all existing tooltips
+    const removeTooltips = () => {
+        const tooltips = document.querySelectorAll('.tooltip');
+        tooltips.forEach((tooltip) => tooltip.remove());
+    };
+
+    // Attach event listeners to each project
+    projects.forEach((project) => {
+        project.addEventListener('touchstart', (e) => {
+            // Remove any lingering tooltips
+            removeTooltips();
+
+            // Show a new tooltip
+            const tooltipText = project.getAttribute('data-tooltip');
+            const tooltip = document.createElement('div');
+            tooltip.className = 'tooltip';
+            tooltip.innerText = tooltipText;
+            document.body.appendChild(tooltip);
+
+            // Position the tooltip
+            const rect = project.getBoundingClientRect();
+            tooltip.style.left = `${rect.left + rect.width / 2}px`;
+            tooltip.style.top = `${rect.bottom + 10 + window.scrollY}px`; // Adjust for scroll position
+
+            // Automatically remove the tooltip after a delay
+            setTimeout(() => {
+                tooltip.remove();
+            }, 2000);
+
+            // Prevent default touch behavior (e.g., click triggering)
+            e.preventDefault();
+        });
+    });
+
+    // Remove tooltips on scroll
+    document.addEventListener('scroll', removeTooltips);
+
+    // Remove tooltips on touch elsewhere
+    document.addEventListener('touchstart', (e) => {
+        if (![...projects].includes(e.target)) {
+            removeTooltips();
+        }
+    });
+});
