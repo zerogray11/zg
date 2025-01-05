@@ -654,7 +654,7 @@ width: fit-content;
  .projectstitlebox{
     display: flex;
     flex-direction: column;
-    height:24%;
+    height:fit-content;
     width:60%;
     align-items: center;
     gap:20px;
