@@ -1256,7 +1256,7 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
      flex-direction: column;    
       justify-content: center;   
       align-items: center;
-        height: 20%;    
+        height: 25%;    
          width: 100%;    
           perspective: 1000px; 
             transform-style: preserve-3d; 
@@ -1266,7 +1266,7 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
                       transition: all 0.3s ease;   
                         position: relative;   
                           overflow: hidden; 
-                          margin-bottom: 30px;
+                          margin-bottom: 80px;
 }
 
 .ServicesTitle {
@@ -1509,6 +1509,7 @@ margin-bottom: 30px;
    }
 
    #aboutInfo {
+      margin-left:50px;
        flex-direction: column; /* Stack items vertically */
        align-items: center;
        justify-content: center;
