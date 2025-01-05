@@ -923,7 +923,23 @@ align-items: center;
  
  
  
- 
+ .project-header {
+   position: absolute;
+   font-family: 'Orbitron', sans-serif;
+   top: 10px; /* Adjust as needed */
+   left: 50%;
+   border: 1px solid white;
+   transform: translateX(-50%);
+   background-color: rgb(50, 116, 144,0.9); /* Semi-transparent background */
+   color: #fff; /* Text color */
+   padding: 5px 10px;
+   border-radius: 50%;
+   font-size: 0.9rem; /* Adjust font size as needed */
+   text-align: center;
+   z-index: 10;
+   pointer-events: none; /* Ensure the header doesn't interfere with clicking */
+}
+
  #boxContact{
  height:fit-content;
  background-image: url(glacier.jpeg);
