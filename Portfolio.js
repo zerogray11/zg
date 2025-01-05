@@ -38,34 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     addHoverEffects();
 });
-document.addEventListener('DOMContentLoaded', () => {
-    const flashcardContainers = document.querySelectorAll('.flashcard-container');
-
-    flashcardContainers.forEach(container => {
-        container.addEventListener('click', () => {
-            container.classList.toggle('flipped'); // Toggle flip on click
-        });
-    });
-
-    // Add hover effects
-    function addHoverEffects() {
-        const serviceBoxes = document.querySelectorAll('#serviceBoxes > .flashcard-container');
-
-        serviceBoxes.forEach(box => {
-            box.addEventListener('mouseenter', () => {
-                box.style.transform = 'scale(1.05)';
-                box.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
-                box.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
-            });
-
-            box.addEventListener('mouseleave', () => {
-                box.style.transform = 'scale(1)';
-                box.style.boxShadow = 'none';
-            });
-        });
-    }
-    addHoverEffects();
-});
 
 
 
@@ -325,14 +297,5 @@ document.addEventListener('DOMContentLoaded', () => {
         if (![...projects].includes(e.target)) {
             removeTooltips();
         }
-    });
-});
-document.addEventListener('DOMContentLoaded', () => {
-    const flashcardContainers = document.querySelectorAll('.flashcard-container');
-
-    flashcardContainers.forEach((container) => {
-        container.addEventListener('click', () => {
-            container.classList.toggle('flipped');
-        });
     });
 });

@@ -1250,6 +1250,7 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
                       transition: all 0.3s ease;   
                         position: relative;   
                           overflow: hidden; 
+                          margin-bottom: 30px;
 }
 
 .ServicesTitle {
@@ -1318,8 +1319,9 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
 }
 
 .flashcard-back {
-   background-color: rgba(255, 255, 255, 0.9);
+   background-color: transparent;
    transform: rotateY(180deg);
+   background-color: rgb(245, 245, 245,0.8);
 }
 
 /* Service images */
@@ -1408,7 +1410,7 @@ margin-bottom: 30px;
       border-radius: 100%;
       padding: 0px;
       border: 1px solid white;
-    
+    z-index: index 1000;
    }
 
    #boxInfo {
