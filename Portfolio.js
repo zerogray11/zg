@@ -299,3 +299,93 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const tooltip = document.createElement('div');
+    tooltip.style.cssText = `
+        position: fixed;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 12px;
+        border-radius: 4px;
+        font-size: 14px;
+        font-family: 'Orbitron', sans-serif;
+        pointer-events: none;
+        z-index: 99999; /* Always on top */
+        display: none;
+        white-space: pre-wrap;
+        text-align: left;
+        max-width: 250px;
+        line-height: 1.4;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    `;
+    document.body.appendChild(tooltip);
+
+    const buttons = document.querySelectorAll('[data-tooltip]');
+
+    // Function to hide tooltip
+    const hideTooltip = () => {
+        tooltip.style.display = 'none';
+    };
+
+    // Function to center tooltip on mobile
+    const centerTooltipMobile = (button) => {
+        const rect = button.getBoundingClientRect();
+        const windowWidth = window.innerWidth;
+        const tooltipWidth = tooltip.offsetWidth;
+        
+        // Center horizontally on screen
+        tooltip.style.left = `${(windowWidth - tooltipWidth) / 2}px`;
+        tooltip.style.top = `${rect.bottom + 10}px`;
+    };
+
+    buttons.forEach(button => {
+        button.addEventListener('mouseenter', () => {
+            const tooltipText = button.getAttribute('data-tooltip');
+            tooltip.textContent = tooltipText;
+            tooltip.style.display = 'block';
+
+            const rect = button.getBoundingClientRect();
+            tooltip.style.left = `${rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2)}px`;
+            tooltip.style.top = `${rect.top - tooltip.offsetHeight - 10}px`;
+        });
+
+        button.addEventListener('mouseleave', () => {
+            tooltip.style.display = 'none';
+        });
+
+        button.addEventListener('mousemove', () => {
+            const rect = button.getBoundingClientRect();
+            tooltip.style.left = `${rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2)}px`;
+            tooltip.style.top = `${rect.top - tooltip.offsetHeight - 10}px`;
+        });
+
+        // Modified touch handler
+        button.addEventListener('touchstart', (e) => {
+            const tooltipText = button.getAttribute('data-tooltip');
+            tooltip.textContent = tooltipText;
+            tooltip.style.display = 'block';
+            
+            // Center tooltip for mobile
+            centerTooltipMobile(button);
+            
+            // Hide tooltip after 1.5 seconds
+            setTimeout(hideTooltip, 1500);
+            e.preventDefault();
+        });
+    });
+
+    // Touch-specific scroll handler
+    let touchScrollTimeout;
+    document.addEventListener('scroll', () => {
+        if ('ontouchstart' in window) {  // Only for touch devices
+            hideTooltip();
+            clearTimeout(touchScrollTimeout);
+            touchScrollTimeout = setTimeout(hideTooltip, 100);
+        }
+    }, { passive: true });
+
+    // Additional touch-specific cleanup
+    document.addEventListener('touchmove', hideTooltip, { passive: true });
+    document.addEventListener('touchend', hideTooltip, { passive: true });
+});
