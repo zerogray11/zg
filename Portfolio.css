@@ -403,7 +403,7 @@ max-width: 1000px;
 line-height: 1.5;
 
 Font-family: 'Montserrat', sans-serif;
-color: greenyellow;
+color: whitesmoke;
 font-weight: 530 ;
 font-size: 1rem;
 text-align: center;
@@ -1509,7 +1509,8 @@ margin-bottom: 30px;
    }
 
    #aboutInfo {
-      margin-left:50px;
+     margin-top: 50px;
+    
        flex-direction: column; /* Stack items vertically */
        align-items: center;
        justify-content: center;
@@ -1517,7 +1518,7 @@ margin-bottom: 30px;
    }
 
    #description {
-       width: 90%; /* Adjust width to fit smaller screens */
+       width: 50%; /* Adjust width to fit smaller screens */
        max-width: none; /* Remove width restrictions */
        margin-top: 20px;
        padding: 10px;
@@ -1535,6 +1536,8 @@ margin-bottom: 30px;
    }
 
    #skills {
+      margin-top: 50px;
+      margin-left: 20px;
        padding: 15px;
        max-height: none; /* Allow height to grow with content */
    }
