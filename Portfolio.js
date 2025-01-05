@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
         color: white;
         padding: 12px;
         border-radius: 4px;
-        font-size: 14px;
+        font-size: 10px;
         font-family: 'Orbitron', sans-serif;
         pointer-events: none;
         z-index: 99999; /* Always on top */
