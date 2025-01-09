@@ -671,7 +671,7 @@ width: fit-content;
    
  }
  .projectstitle {
-   
+   border: 1px white solid;
    font-size: 2rem;
    margin-top: -8px;
    font-weight: 600;
@@ -702,7 +702,7 @@ width: fit-content;
 
 .projectsubtitle {
   
-   
+   border: 1px white solid;
    font-size: 1.2rem;
    font-weight: 550;
    font-style: italic;
