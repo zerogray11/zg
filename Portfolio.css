@@ -1854,7 +1854,7 @@ margin-bottom: 30px;
        flex-direction: row;
        gap: 10px;
        padding: 8px 20px;
-       background: rgba(57, 56, 56, 0.95);
+       background:slategray;
        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
        width: 90%;
        justify-content: center;
