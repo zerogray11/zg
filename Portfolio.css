@@ -33,31 +33,31 @@ body, html {
         background-position: 0 0; 
     }
  }
- #boxIntro{
-    animation: border-glow 0.5s ease-in-out infinite;
- display: flex;
- flex-direction: column;
-align-items: center;
-justify-content: space-between;
- background-color: rgba(255, 255, 255, 0.8);
- margin: 0 auto;
-    width: 90%;
-    min-height: fit-content; /* Allows height to grow with content */
-    height: auto;
- gap:10px;
- perspective: 1000px;
-    transform-style: preserve-3d;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 
-        0 10px 20px rgba(0,0,0,0.1),
-        0 6px 6px rgba(0,0,0,0.1),
-        inset 0 2px 4px rgba(255,255,255,0.7);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
- 
- }
+ #boxIntro {
+   animation: border-glow 0.5s ease-in-out infinite;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between; /* Ensure spacing between content and button */
+   background-color: rgba(255, 255, 255, 0.8);
+   margin: 0 auto;
+   width: 90%;
+   min-height: fit-content; /* Allows height to grow with content */
+   height: auto;
+   gap: 10px;
+   perspective: 1000px;
+   transform-style: preserve-3d;
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 
+       0 10px 20px rgba(0,0,0,0.1),
+       0 6px 6px rgba(0,0,0,0.1),
+       inset 0 2px 4px rgba(255,255,255,0.7);
+   transition: all 0.3s ease;
+   position: relative;
+   overflow: hidden;
+   position: relative;
+}
  
  
 
@@ -103,28 +103,25 @@ p {
     background-color: #444444;
  }
  .btn-intro {
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 500;
-    width: 190px;
-    height: 43px;
-    font-size: 16px;
-    border-radius: 99%;
-    background-color: #444444;;
-    border: 2.5px solid white;
-    color: white;
-    text-shadow: 0 0 5px rgba(110, 110, 110, 0.5), 0 0 10px rgba(150, 150, 150, 0.5);
-    transition: all 0.3s ease;
-    cursor: pointer;
-    margin-left: 20px;
-    margin-top: 20px;
-    position: relative;
-    overflow: hidden;
-    outline: none;
-    transform-origin: center;
-    
-    
-    
+   font-family: 'Orbitron', sans-serif;
+   font-weight: 500;
+   width: 190px;
+   height: 43px;
+   font-size: 16px;
+   border-radius: 99%;
+   background-color: #444444;
+   border: 2.5px solid white;
+   color: white;
+   text-shadow: 0 0 5px rgba(110, 110, 110, 0.5), 0 0 10px rgba(150, 150, 150, 0.5);
+   transition: all 0.3s ease;
+   cursor: pointer;
+   margin-top: auto; /* Pushes the button to the bottom */
+   margin-bottom: 20px; /* Adds spacing from the box's bottom */
+   position: relative; /* Ensures button remains inside the box */
+   outline: none;
+   transform-origin: center;
 }
+
 
 .btn-intro .ripple {
     position: absolute;
@@ -1164,172 +1161,97 @@ padding: 20px;
    
  }
   
-  
- #linkedinbox{
-    height: 30%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap:10px;
-    align-items: flex-start;
-   
-   
- }
- .linkedinlink{
-    font-size: 1.5rem;
-    font-weight: 530;
-    color: white;
-   
-    font-family: 'Orbitron', sans-serif;
-    text-align: center;
-    margin-left: 30px;
- 
- 
-   
- }
- .linkedinlink svg{
-    margin-right: 10px;
-    
- }
- .llink{
-    margin-left: 30px;
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 530;
-    color:white;
-    font-size: 1.2rem;}
- 
- 
- #writingboxes{
+ #writingboxes {
    margin-top: 30px;
-    height:100%;
-    width:100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly !important;
-  
- }
- .Emailbox{
-   
-    height:fit-content;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  
- }
- .SubjectBox{
-    height:fit-content;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 20px; /* Adds space between form elements */
+}
+.Emailbox{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 10px; 
+}
+ .Subjectbox, .Messagebox {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 10px; 
+   margin-top: 20px;/* Space between title and textarea */
+}
 
- }
- .Messagebox{
-    height:fit-content;
-    width: 100%; 
-    display: flex;
-    flex-direction: column;
- }
- .sendmessage{
-   margin-top: 20px;
-   margin-bottom: 20px;
-    display: flex;
-    justify-content: center;  
-    align-items: center;     
-         
-    font-size: 16px;        
-    text-align: center;      
-    border: 1px solid #ccc;  
-    background-color: #f8f8f8;
-    cursor: pointer;       
-    border-radius: 5px;      
-    width: auto;     
-  color:black;
-    height:fit-content;
-    width: fit-content;
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 500;
-    border: 2px solid white;
-    font-size: 0.9rem;
-    perspective: 1000px;
-    transform-style: preserve-3d;
-    border-radius: 10px;
-    box-shadow: 
-        0 10px 20px rgba(0,0,0,0.1),
-        0 6px 6px rgba(0,0,0,0.1),
-        inset 0 2px 4px rgba(255,255,255,0.5);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
 
-    background: linear-gradient(to right, rgba(186, 223, 255, 0.8), rgba(102, 153, 204, 0.8));
+textarea {
+   width: 100%;
+   max-width: 600px; /* Keeps fields uniform */
+   min-width: 300px;
+   height: auto;
+   min-height: 40px;
+   max-height: 150px; /* Adjust max height for readability */
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   background-color: #fff;
+   resize: vertical; /* Allows resizing only vertically */
+   font-family: 'Orbitron', sans-serif;
+   font-size: 0.9rem;
+   color: #333;
+}
 
-   
-    /*background: rgb(65,58,180);
-    background: rgb(45,94,200);
-background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, rgba(17,33,61,1) 48%, rgba(3,50,146,1) 81%, rgba(0,110,208,1) 100%);
- /*background: linear-gradient(90deg, rgba(65,58,180,1) 14%, rgba(78,154,212,1) 54%, rgba(211,211,211,1) 100%, rgba(69,183,252,1) 100%);
-  */
- }
+.emailboxwrite {
+   height: 20px;
+}
 
- .boxemailtitle{
-    font-size: 0.8rem;
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 500;
-    color:black;
-    background: linear-gradient(to right, rgba(186, 223, 255, 0.8), rgba(102, 153, 204, 0.8));
+.subjectboxwrite {
+   height: 50px;
+}
 
-   width: max-content;
+.messageboxwrite {
+   height: 150px; /* Larger area for message input */
+}
+
+.boxemailtitle, .subjecttitle, .messagetitle {
+   font-size: 0.8rem;
+   font-family: 'Orbitron', sans-serif;
+   font-weight: 500;
+   color: black;
+   background: linear-gradient(to right, rgba(186, 223, 255, 0.8), rgba(102, 153, 204, 0.8));
    border-radius: 10%;
-   padding:10px;
-   margin-top: 30px;
-  
- }
- .emailboxwrite{
- height:100%;
- width: 100%;
- max-width: 500px;
- min-width: 200px;
- }
- .subjecttitle{
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 500;
-    font-size: 0.8rem;
-    color:black;
-    background: linear-gradient(to right, rgba(186, 223, 255, 0.8), rgba(102, 153, 204, 0.8));
+   padding: 10px;
+   width: max-content;
+}
 
-    width: max-content;
-    border-radius: 10%;
-    margin-top: 10px;
-    padding:10px;
-    margin-top: 30px;
-    
- }
- .subjectboxwrite{
- height:100%;
- width: 100%;
- background-color: white;
- max-width: 500px;
- min-width: 200px;
- }
- .messagetitle{
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 500;
-    font-size: 0.8rem;
-    color:black;
-    background: linear-gradient(to right, rgba(186, 223, 255, 0.8), rgba(102, 153, 204, 0.8));
 
-    width: max-content;
-    border-radius: 10%;
-    padding:10px;
-   margin-top: 30px;
- }
- .messageboxwrite{
-    height:100%;
- width: 100%;
- background-color: white;
- max-width: 500px;
- }
+.sendmessage {
+   margin-top: 20px;
+   align-self: center; /* Centers the button */
+   font-size: 1rem;
+   text-align: center;
+  margin-left: 25%;
+   border: 2px solid white;
+   font-family: 'Orbitron', sans-serif;
+   font-weight: 500;
+   border-radius: 10px;
+   cursor: pointer;
+   background: linear-gradient(to right, rgba(186, 223, 255, 0.8), rgba(102, 153, 204, 0.8));
+   color: black;
+   box-shadow: 
+       0 10px 20px rgba(0, 0, 0, 0.1),
+       inset 0 2px 4px rgba(255, 255, 255, 0.5);
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sendmessage:hover {
+   transform: scale(1.05);
+   box-shadow: 
+       0 15px 30px rgba(0, 0, 0, 0.2),
+       inset 0 3px 5px rgba(255, 255, 255, 0.6);
+}
+
  
  #serviceBoxes > div {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1519,10 +1441,7 @@ margin-bottom: 30px;
        text-indent: 10px;
    }
 
-   .btn-intro {
-    display:none;
-       
-   }
+   
    #boxTopBar{
     display: none;
    }
@@ -1573,10 +1492,11 @@ margin-bottom: 30px;
    .hey {
        font-size: 1rem !important; /* Smaller font size */
    }
-
    .btn-intro {
-      display: none;
-   }
+      margin-top: auto; /* Pushes the button to the bottom */
+       /* Spacing from the box's bottom */
+      width: 100%; /* Make the button full-width for better usability */
+  }
 
    p {
        font-size: 0.8rem;
@@ -1826,6 +1746,7 @@ margin-bottom: 30px;
 
    .projectstitlebox {
        padding: 10px;
+       height: fit-content;
        gap: 15px; /* Reduce gap between title and subtitle */
        box-shadow: 
            0 5px 10px rgba(0, 0, 0, 0.1),
@@ -1920,6 +1841,7 @@ margin-bottom: 30px;
        width: auto;
        font-size: 0.8rem;
        padding: 8px 16px;
+       margin-left: 25%;
    }
 }
 @media screen and (max-width: 768px) {
