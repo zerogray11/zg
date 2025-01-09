@@ -667,7 +667,7 @@ width: fit-content;
     position: relative;
     overflow: hidden;
     background-color: rgba(119, 181, 210, 0.1);
-    border:1px white solid;
+    
    
  }
  .projectstitle {
@@ -697,12 +697,12 @@ width: fit-content;
        0 0 30px rgba(128, 218, 255, 0.4);
    
    backdrop-filter: blur(5px);
-   border:1px white solid;
+   
 }
 
 .projectsubtitle {
   
-   border:1px white solid;
+   
    font-size: 1.2rem;
    font-weight: 550;
    font-style: italic;
