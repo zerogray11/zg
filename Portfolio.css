@@ -1325,7 +1325,7 @@ textarea {
    transition: transform 0.3s ease, box-shadow 0.3s ease;
    margin-bottom: 20px;
    
-   cursor: pointer;
+    cursor: pointer;
 }
 /* Flashcard: Rotate on click or touch */
 .flashcard-container:active .flashcard,
@@ -1712,7 +1712,6 @@ margin-bottom: 30px;
 
  .project {
     position: relative;
-    aspect-ratio: 4/3;
     width: 100%;
     height: 100%;
     overflow: hidden; /* Ensures no overflow from the image */
@@ -1726,7 +1725,6 @@ margin-bottom: 30px;
 
 
    .project-header {
-      margin-top: 26px;
        font-size: 0.9rem; /* Slightly smaller font */
        padding: 5px 10px; /* Adjust padding */
    }
@@ -1744,7 +1742,7 @@ margin-bottom: 30px;
    .project img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: cover;
       object-position: center; /* Center the image */
       display: block; /* Prevent unwanted extra space caused by inline-block */
       border-radius: inherit; /* Ensure corners match container */
@@ -1752,7 +1750,7 @@ margin-bottom: 30px;
   
 
    .project:hover {
-       transform: scale(1.02); /* Slight zoom on hover */
+       transform: scale(1.03); /* Slight zoom on hover */
        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Lighter hover shadow */
    }
 
