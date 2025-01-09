@@ -1542,6 +1542,7 @@ margin-bottom: 30px;
        max-width: none; /* Remove width restrictions */
        margin-top: 20px;
        padding: 10px;
+      
    }
 
    .descTitle {
@@ -1556,10 +1557,11 @@ margin-bottom: 30px;
    }
 
    #skills {
-      margin-top: 50px;
+      margin-top: 40px;
       margin-left: 20px;
        padding: 15px;
-       max-height: none; /* Allow height to grow with content */
+       max-height: none;
+       margin-bottom: 20px; /* Allow height to grow with content */
    }
 
    #itskills {
@@ -1576,6 +1578,7 @@ margin-bottom: 30px;
       }
 
    #certifications {
+      margin-top: 30px;
        flex-direction: column; /* Stack certifications vertically */
        gap: 10px; /* Reduce spacing */
    }
