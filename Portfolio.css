@@ -1325,7 +1325,12 @@ textarea {
    transition: transform 0.3s ease, box-shadow 0.3s ease;
    margin-bottom: 20px;
    
-   
+   cursor: pointer;
+}
+/* Flashcard: Rotate on click or touch */
+.flashcard-container:active .flashcard,
+.flashcard-container:hover .flashcard {
+   transform: rotateY(180deg);
 }
 
 .flashcard-container:hover {
