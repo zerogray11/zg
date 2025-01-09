@@ -109,8 +109,8 @@ p {
     height: 43px;
     font-size: 16px;
     border-radius: 99%;
-    background-color: #6c6666;
-    border: 2.5px solid rgb(28, 28, 28);
+    background-color: #444444;;
+    border: 2.5px solid white;
     color: white;
     text-shadow: 0 0 5px rgba(110, 110, 110, 0.5), 0 0 10px rgba(150, 150, 150, 0.5);
     transition: all 0.3s ease;
@@ -121,6 +121,7 @@ p {
     overflow: hidden;
     outline: none;
     transform-origin: center;
+    
     
     
 }
@@ -207,7 +208,7 @@ p {
     flex-direction: row;
     z-index: 10;
     border: white 1px solid;
-    background-color:rgba(183, 186, 190, 0.9);
+    background-color: #444444;
     border-radius: 50%;
     margin-right: 10px;
     padding: 7px;
@@ -638,7 +639,7 @@ width: fit-content;
  
  
  #boxProjects{
-    height:120svh;
+    height:130svh;
     background-image: url(upsidedown.jpeg);
     background-size: cover;
     background-position: 0 0;
@@ -669,97 +670,91 @@ width: fit-content;
     position: relative;
     overflow: hidden;
     background-color: rgba(119, 181, 210, 0.1);
+    border:1px white solid;
    
  }
- .projectstitle{
+ .projectstitle {
    
-   text-shadow:
-    1px 1px 0 #fff8f8,
-    2px 2px 0 #ffffff,
-    3px 3px 0 #ccc,
-    4px 4px 0 #ccc,
-    5px 5px 0 #ccc,
-    6px 6px 0 #ccc
-    
-   ;
-   transform: skewX(-30deg) !important;
-    transform: 
-    translateZ(50px)
-    rotateX(0deg)
-    rotateY(45deg);
-    font-size: 2rem;
-    margin-top:-8px;
-    font-weight: 520;
-    color: rgb(255, 255, 255);
-    font-family: 'Orbitron', sans-serif;
-    text-align: center;
-    transform-style: preserve-3d;
-    padding: 40px;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background-color: rgb(50, 116, 144);
-    box-shadow:
-    -3px -3px 0 0 rgb(40, 92, 115),
-    -5px -5px 0 0 rgb(30, 69, 86),
-    -7px -7px 0 0 rgb(32, 75, 93);
-  transform: rotateX(20deg) rotateY(30deg);
-   
-  
- 
- 
- }
- .projectsubtitle{
-   transform: skewX(-10deg);
-   
-   text-shadow:
-    1px 1px 0 #ccc,
-    2px 2px 0 #ccc;
- font-size:1.2rem;
- font-weight: 550;
- font-style: italic;
- color: rgb(255, 255, 255);
-   
-    font-family: 'Orbitron', sans-serif;
-    text-align: center;
-    border-radius: 50%;
-    padding: 20px;
-    background-color: rgb(50, 116, 144);
-   margin-top: -10px;
-   /*box-shadow: 
-   0 10px 20px rgba(0,0,0,0.1),
-   0 6px 6px rgba(0,0,0,0.1),
-   inset 0 2px 4px rgba(255,255,255,0.5);*/
+   font-size: 2rem;
+   margin-top: -8px;
+   font-weight: 600;
+   color: rgb(255, 255, 255);
+   font-family: 'Orbitron', sans-serif;
+   text-align: center;
+   transform-style: preserve-3d;
+   padding: 40px;
+   transition: all 0.3s ease;
+   overflow: hidden;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50%;
+  background-color:  rgb(113, 138, 185);
    box-shadow:
-   -3px -3px 0 0 rgb(40, 92, 115),
-   -5px -5px 0 0 rgb(30, 69, 86),
-   -7px -7px 0 0 rgb(32, 75, 93);
- 
-transition: all 0.3s ease;
-transform: 
-    translateZ(50px)
-    rotateX(0deg)
-    rotateY(45deg);
-overflow: hidden;
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
+       -3px -3px 0 0 rgba(40, 92, 115, 0.9),
+       -5px -5px 0 0 rgba(30, 69, 86, 0.8),
+       -7px -7px 0 0 rgba(32, 75, 93, 0.7),
+       inset 0 0 20px rgba(255, 255, 255, 0.3),
+       0 0 30px rgba(128, 218, 255, 0.4);
    
- }
+   backdrop-filter: blur(5px);
+   border:1px white solid;
+}
+
+.projectsubtitle {
+  
+   border:1px white solid;
+   font-size: 1.2rem;
+   font-weight: 550;
+   font-style: italic;
+   color: rgb(255, 255, 255);
+   font-family: 'Orbitron', sans-serif;
+   text-align: center;
+   border-radius: 50%;
+   padding: 20px;
+   background:  rgb(113, 138, 185);
+   margin-top: -10px;
+   box-shadow:
+       -3px -3px 0 0 rgba(40, 92, 115, 0.9),
+       -5px -5px 0 0 rgba(30, 69, 86, 0.8),
+       -7px -7px 0 0 rgba(32, 75, 93, 0.7),
+       inset 0 0 15px rgba(255, 255, 255, 0.2),
+       0 0 20px rgba(128, 218, 255, 0.3);
+   transition: all 0.3s ease;
+   transform: translateZ(50px) rotateX(0deg) rotateY(45deg);
+   overflow: hidden;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   backdrop-filter: blur(3px);
+}
+
+/* Optional: Add hover effects */
+.projectstitle:hover, .projectsubtitle:hover {
+   text-shadow:
+       1px 1px 2px #ffffff,
+       2px 2px 2px rgba(128, 218, 255, 0.9),
+       3px 3px 3px rgba(128, 218, 255, 0.7),
+       0 0 25px rgba(128, 218, 255, 0.8);
+   box-shadow:
+       -3px -3px 0 0 rgba(40, 92, 115, 1),
+       -5px -5px 0 0 rgba(30, 69, 86, 0.9),
+       -7px -7px 0 0 rgba(32, 75, 93, 0.8),
+       inset 0 0 25px rgba(255, 255, 255, 0.4),
+       0 0 35px rgba(128, 218, 255, 0.5);
+}
+ 
  .projectsbox{
     margin-top: 55px;
     display:flex;
     flex-direction: row;
-    height:65%;
-    width:80%;
+    height:90%;
+    width:90%;
     gap:20px;
       justify-content: space-evenly;
+      margin-bottom: 20px;
    
    
  }
@@ -783,18 +778,7 @@ align-items: center;
  
  
  }
- .project1, .project2, .project3, .project4 {
-   display: flex;
-   justify-content: center;/* Horizontally center */
-   align-items: center;     /* Vertically center */
-   height: 100%;            /* Ensure container takes full height */
-   width: 100%;             /* Ensure container takes full width */
- }
  
- .project1 img, .project2 img, .project3 img, .project4 img {
-   max-width: 100%;         /* Scale the image to fit */
-   max-height: 100%;        /* Prevent overflow */
- }
  
  .project1 {
     transform-style: preserve-3d;
@@ -806,7 +790,7 @@ align-items: center;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    border: 4px solid rgb(50, 116, 144,0.6) !important;
+    
     animation: border-glow 0.5s ease-in-out infinite;
     height: 100%;
     width: 100%;
@@ -818,7 +802,7 @@ align-items: center;
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease !important;
     
-    border-radius: 20% !important;}
+    }
   
  .project-link {
     display: block;
@@ -828,10 +812,7 @@ align-items: center;
  }
  
  
- .project1:hover {
-    transform: translateY(-10px) rotateY(5deg) rotateX(5deg) !important;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2)!important;
- }
+ 
  .project1 iframe{
     width: 100%;
     height: 100%;
@@ -856,14 +837,11 @@ align-items: center;
     cursor: pointer;
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease !important;
-    border: 4px solid rgb(50, 116, 144,0.6) !important;
-    border-radius: 20% !important;
+   
+    
    
  }
- .project2:hover{
-    transform: translateY(-10px) rotateY(5deg) rotateX(5deg)!important;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2)!important;
- }
+
  .project3{
     transform-style: preserve-3d;
     padding: 20px;
@@ -884,15 +862,11 @@ align-items: center;
     cursor: pointer;
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 4px solid rgb(50, 116, 144,0.6) !important;
-    border-radius: 20% !important;
+    
+    
    z-index: 1;
  }
- .project3:hover{
-    transform: translateY(-10px) rotateY(5deg) rotateX(5deg)!important;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2)!important;
-    z-index: 1000;
- }
+
  .project4{
     animation: border-glow 0.5s ease-in-out infinite;
     height:100%;
@@ -904,8 +878,8 @@ align-items: center;
     cursor: pointer;
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease!important;
-    border: 4px solid rgb(50, 116, 144,0.6) !important;
-    border-radius: 20% !important;
+   
+    
     transform-style: preserve-3d;
     padding: 20px;
     box-shadow: 
@@ -917,29 +891,136 @@ align-items: center;
     overflow: hidden;
     
  }
- .project4:hover{
-    transform: translateY(-10px) rotateY(5deg) rotateX(5deg)!important;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2)!important;
- }
  
  
  
- .project-header {
+ 
+
+
+
+
+.project {
+   position: relative;
+   width: 100%;
+}
+
+.project1,
+.project2,
+.project3,
+.project4 {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+   width: 100%;
+   position: relative;
+   overflow: hidden;
+   
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+   background-size: cover;
+   background-position: center;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+
+
+
+
+/* Links Inside Projects */
+.project-link {
+   display: block;
+   height: 100%;
+   width: 100%;
+   text-decoration: none;
+}
+
+/* Ensuring Images Fit the Box */
+.project1 img, .project2 img, .project3 img, .project4 img {
+   max-width: 100%;
+   max-height: 100%;
+   object-fit: cover; /* Ensures images fill the container */
+}
+.projectsbox {
+   margin-top: 55px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   gap: 20px;
+   width: 98%;
+   height: 90%;
+}
+
+/* Left and Right Columns */
+.projectsbox1, .projectsbox2 {
+   display: flex;
+   flex-direction: column;
+   gap: 35px;
+   width: 50%;
+   height: 100%;
+}
+
+.project-header {
    position: absolute;
-   font-family: 'Orbitron', sans-serif;
-   top: 10px; /* Adjust as needed */
-   left: 50%;
-   border: 1px solid white;
-   transform: translateX(-50%);
-   background-color: rgb(50, 116, 144,0.9); /* Semi-transparent background */
-   color: #fff; /* Text color */
-   padding: 5px 10px;
-   border-radius: 50%;
-   font-size: 0.7rem; /* Adjust font size as needed */
+   top: 0; /* Change from -30px to 0 */
+   left: 0;
+   width: 100%;
+   background-color: rgb(97, 118, 158,0.8);
+   color: white;
+   padding: 3px 5px;
+   border-radius: 0 0 10px 10px; /* Round only bottom corners */
+   font-size: 1rem;
    text-align: center;
    z-index: 10;
-   pointer-events: none; /* Ensure the header doesn't interfere with clicking */
+   font-weight: 520;
+   font-family: 'Orbitron', sans-serif;
+   border:1px white solid;
 }
+
+/* Header always visible */
+.project .project-header {
+   opacity: 1; /* Always visible */
+   pointer-events: auto; /* Ensure interactions work */
+}
+
+.project {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   /* Ensures content stays within bounds */
+   border-radius: 10px;
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+   margin-top: 20px; /* Add space below header */
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Hover effect on the entire project */
+
+
+/* Links Inside Projects */
+.project-link {
+   display: block;
+   height: 100%;
+   width: 100%;
+   text-decoration: none;
+}
+
+/* Ensuring Images Fit the Box */
+.project img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   border-radius: 10px; /* Matches container rounding */
+   transition: transform 0.5s ease; /* Smooth zoom effect */
+   transform: scale(1); /* Initial zoomed-out state */
+}
+
+
+.project:hover {
+   transform: translateY(-10px); /* Move up instead of scale */
+}
+
+
 
  #boxContact{
  height:fit-content;
@@ -952,14 +1033,24 @@ background-size: cover;
  
  
  }
+
+
+/* For a more dynamic effect, you can add a subtle animation */
+
+
  .ctitle{
+   background: linear-gradient(135deg, #2C2F45, #35546A, #6B9BB5, #A4D2E8);
+
+
+  
+  
     margin-top: 10px;
-   /*background-color: rgba(34, 102, 170, 1);*/
-   background: linear-gradient(to right, rgba(255, 105, 180, 0.8), rgba(65, 105, 225, 0.8));
+ 
+
    border-radius: 90%;
-   padding: 20px;
+   
     height: max-content;
-    width: 30%;
+    width: 20%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -967,7 +1058,7 @@ background-size: cover;
     gap:15px;
     perspective: 1000px;
     transform-style: preserve-3d;
-    padding: 20px;
+    
     border-radius: 10px;
     box-shadow: 
         0 10px 20px rgba(0,0,0,0.1),
@@ -982,10 +1073,10 @@ background-size: cover;
  }
  
  .contactTitle{
-    margin-top: 0px;
+    margin-top: 10px;
     font-size: 2rem;
     font-weight: 500;
-    color: white;
+    color: black;
     font-family: 'Orbitron', sans-serif;
     text-align: center;
    
@@ -996,7 +1087,7 @@ background-size: cover;
  .contactsubtitle{
     font-size: 1rem;
     font-weight: 500;
-    color: white;
+    color: black;
    margin-top: -20px;
     font-family: 'Orbitron', sans-serif;
     text-align: center;
@@ -1005,8 +1096,8 @@ background-size: cover;
  }
  #Content{
   
-  height: 60%;
-  width: 80%; 
+  height: 70%;
+  width: fit-content; 
   display: flex;
   flex-direction: row;
   align-items:center!important;
@@ -1016,8 +1107,11 @@ gap: 20px;
   
  }
  #connect{
-   margin-top: 100px;
-   background: linear-gradient(to right, rgba(255, 105, 180, 1), rgba(65, 105, 225, 1));
+   margin-top: 30px;
+   margin-bottom: 5PX;
+   background: linear-gradient(135deg, #1B1D36, #23394F, #567D95, #82C0D9);
+
+padding: 20px;
     height:fit-content;
     width:fit-content;
     display: flex;
@@ -1046,13 +1140,14 @@ gap: 20px;
    
  }
  .email{
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 530;
     color: white;
+    
     margin-top: 15px;
     font-family: 'Orbitron', sans-serif;
     text-align: center;
-    margin-left: 30px;
+   
    
  }
  .email svg{
@@ -1061,7 +1156,7 @@ gap: 20px;
  
  .eaddress {
     font-size: 1.2rem;
-    margin-right: 30px;
+    
     font-family: 'Exo 2', sans-serif;
     font-weight: 530;
     color:white;
@@ -1107,7 +1202,7 @@ gap: 20px;
  #writingboxes{
    margin-top: 30px;
     height:100%;
-    width:50%;
+    width:100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly !important;
@@ -1115,14 +1210,14 @@ gap: 20px;
  }
  .Emailbox{
    
-    height:20%;
+    height:fit-content;
     width: 100%;
     display: flex;
     flex-direction: column;
   
  }
  .SubjectBox{
-    height:20%;
+    height:fit-content;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -1130,7 +1225,7 @@ gap: 20px;
 
  }
  .Messagebox{
-    height:80%;
+    height:fit-content;
     width: 100%; 
     display: flex;
     flex-direction: column;
@@ -1141,7 +1236,7 @@ gap: 20px;
     display: flex;
     justify-content: center;  
     align-items: center;     
-    padding: 10px 20px;      
+         
     font-size: 16px;        
     text-align: center;      
     border: 1px solid #ccc;  
@@ -1149,7 +1244,7 @@ gap: 20px;
     cursor: pointer;       
     border-radius: 5px;      
     width: auto;     
-  color:white;
+  color:black;
     height:fit-content;
     width: fit-content;
     font-family: 'Orbitron', sans-serif;
@@ -1167,7 +1262,8 @@ gap: 20px;
     position: relative;
     overflow: hidden;
 
-    background: linear-gradient(to right, rgba(255, 105, 180, 0.8), rgba(65, 105, 225, 0.8));
+    background: linear-gradient(to right, rgba(186, 223, 255, 0.8), rgba(102, 153, 204, 0.8));
+
    
     /*background: rgb(65,58,180);
     background: rgb(45,94,200);
@@ -1177,18 +1273,20 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
  }
 
  .boxemailtitle{
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-family: 'Orbitron', sans-serif;
     font-weight: 500;
-    color:white;
-    background: linear-gradient(to right, rgba(255, 105, 180, 0.8), rgba(65, 105, 225, 0.8));
+    color:black;
+    background: linear-gradient(to right, rgba(186, 223, 255, 0.8), rgba(102, 153, 204, 0.8));
+
    width: max-content;
-   border-radius: 50%;
+   border-radius: 10%;
    padding:10px;
-   border: 1px solid white;
+   margin-top: 30px;
+  
  }
  .emailboxwrite{
- height:50%;
+ height:100%;
  width: 100%;
  max-width: 500px;
  min-width: 200px;
@@ -1196,17 +1294,19 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
  .subjecttitle{
     font-family: 'Orbitron', sans-serif;
     font-weight: 500;
-    font-size: 1rem;
-    color:white;
-    background: linear-gradient(to right, rgba(255, 105, 180, 0.8), rgba(65, 105, 225, 0.8));
+    font-size: 0.8rem;
+    color:black;
+    background: linear-gradient(to right, rgba(186, 223, 255, 0.8), rgba(102, 153, 204, 0.8));
+
     width: max-content;
-    border-radius: 50%;
+    border-radius: 10%;
     margin-top: 10px;
     padding:10px;
-    border: 1px solid white;
+    margin-top: 30px;
+    
  }
  .subjectboxwrite{
- height:40%;
+ height:100%;
  width: 100%;
  background-color: white;
  max-width: 500px;
@@ -1215,16 +1315,17 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
  .messagetitle{
     font-family: 'Orbitron', sans-serif;
     font-weight: 500;
-    font-size: 1rem;
-    color:white;
-    background: linear-gradient(to right, rgba(255, 105, 180, 0.8), rgba(65, 105, 225, 0.8));
+    font-size: 0.8rem;
+    color:black;
+    background: linear-gradient(to right, rgba(186, 223, 255, 0.8), rgba(102, 153, 204, 0.8));
+
     width: max-content;
-    border-radius: 50%;
+    border-radius: 10%;
     padding:10px;
-    border: 1px solid white;
+   margin-top: 30px;
  }
  .messageboxwrite{
-    height:150%;
+    height:100%;
  width: 100%;
  background-color: white;
  max-width: 500px;
@@ -1281,20 +1382,26 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
 /* Services grid layout */
 #serviceBoxes {
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   grid-template-columns: repeat(2, 1fr); /* Two items per row */
    gap: 30px;
    width: 100%;
    max-width: 1200px;
    padding: 0 20px;
+   margin: 0 auto; 
+   
+   /* Center the grid */
 }
 
 /* Flashcard container */
 .flashcard-container {
    width: 100%;
-   height: 400px;
+   height: 500px;
    perspective: 1000px;
    position: relative;
    transition: transform 0.3s ease, box-shadow 0.3s ease;
+   margin-bottom: 20px;
+   
+   
 }
 
 .flashcard-container:hover {
@@ -1336,9 +1443,8 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
 }
 
 .flashcard-back {
-   background-color: transparent;
+   background-color: rgba(245, 245, 245, 0.8);
    transform: rotateY(180deg);
-   background-color: rgb(245, 245, 245,0.8);
 }
 
 /* Service images */
@@ -1349,8 +1455,8 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
 .onlinemarketing {
    width: 100%;
    height: 100%;
-   object-fit: cover;
-   border-radius: 50%;
+   object-fit: contain; /* Ensures the full image is visible */
+   border-radius: 50% !important;
 }
 
 /* Titles */
@@ -1385,6 +1491,7 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
    margin: 0;
 }
 
+
 /* General Mobile Adjustments */
 @media screen and (max-width: 768px) {
    #boxHome {
@@ -1413,25 +1520,15 @@ margin-bottom: 30px;
    }
 
    .btn-intro {
-       width: 150px; /* Smaller button */
-       height: fit-content;
-       font-size: 14px;
-       margin: 10px auto; 
-       padding: 10px;/* Center buttons */
+    display:none;
        
    }
    #boxTopBar{
-      background-color:rgba(183, 186, 190, 0.9);
-      margin-bottom: 20px;
-      margin-top: 20px;
-      border-radius: 100%;
-      padding: 0px;
-      border: 1px solid white;
-    z-index: index 1000;
+    display: none;
    }
 
    #boxInfo {
-      margin-top: 10px;
+     
        flex-direction: column; /* Stack items vertically */
        align-items: center;
        gap: 20px; /* Adjust gaps */
@@ -1445,6 +1542,7 @@ margin-bottom: 30px;
    }
 
    #boxName {
+      margin-bottom: 100px;
        margin-top: 20px;
        font-size: 1rem; /* Reduce font size */
        padding: 5px;
@@ -1477,14 +1575,15 @@ margin-bottom: 30px;
    }
 
    .btn-intro {
-       width: fit-content;
-       height: fit-content;
-       font-size: 12px;
+      display: none;
    }
 
    p {
        font-size: 0.8rem;
    }
+}
+#boxIntro{
+   margin-bottom: 100px;
 }
 @media (max-width: 768px) {
    #boxAbout {
@@ -1602,12 +1701,11 @@ margin-bottom: 30px;
 .frontend,
 .pm,
 .onlinemarketing {
-   height:40vh;
+   height:100vh;
 }
 
   .flashcard-container {
-      width: 100%;
-      max-width: 300px;
+      width: 95vw;
       margin: 0 auto;
       height: 43vh;
   }
@@ -1618,7 +1716,7 @@ margin-bottom: 30px;
    .programManagementService,
    .onlineMarketingservice {
 
-       width: 90%; /* Make service boxes full-width */
+       width: 100vw; /* Make service boxes full-width */
        height: auto; /* Allow flexible height */
        padding: 30px;
        margin-top: 15px;
@@ -1638,7 +1736,7 @@ margin-bottom: 30px;
    .frontend,
    .pm,
    .onlinemarketing {
-       height: 50%; /* Adjust image height */
+       height: 100%; /* Adjust image height */
        width: 60%; /* Adjust image width */
    }
 
@@ -1646,6 +1744,7 @@ margin-bottom: 30px;
    .frontendescription,
    .pmdescription,
    .omdescription {
+      width: 100%;
        font-size: 0.9rem; /* Reduce text size */
        padding: 10px; /* Add padding for readability */
    }
@@ -1656,94 +1755,104 @@ margin-bottom: 30px;
        transform: none; /* Remove translation for simpler animations */
    }
 
+/* Media Query for Mobile Screens */
 @media (max-width: 768px) {
    #boxProjects {
-      height: auto; /* Allow flexible height */
-      padding: 20px; /* Add padding for spacing */
-      background-size: cover;
-      background-position: center;
-      animation: none; /* Remove animation for better performance */
-  }
+       height: auto; /* Allow the height to adjust */
+       background-size: cover;
+       padding: 10px;
+       flex-direction: column; /* Already column for this section */
+   }
 
-  .projectstitlebox {
-      height: auto; /* Allow flexible height */
-      padding: 20px;
-      gap: 10px;
-      background-color: rgba(119, 181, 210, 0.1); /* Adjust background transparency */
-      box-shadow: none; /* Remove box-shadow for smaller screens */
-  }
+   .projectsbox {
+       flex-direction: column; /* Stack the projects vertically */
+       align-items: center; /* Center-align the projects */
+       gap: 30px; /* Adjust gap between projects */
+       width: 100%; /* Take full width */
+       height: auto; /* Adjust to content height */
+       margin-top: 20px;
+   }
 
-  .projectstitle {
-      font-size: 1.8rem; /* Reduce font size for smaller screens */
-      padding: 20px;
-      margin-top: 10px; /* Adjust margin */
-      border-radius: 10px; /* Adjust border-radius */
-      background-color: rgb(50, 116, 144); /* Keep the background color */
-      text-shadow: 1px 1px 0 #fff8f8, 2px 2px 0 #ffffff, 3px 3px 0 #ccc; /* Keep text-shadow */
-  }
-  .projectstitle{
-     font-size:2.5rem;}
+   .projectsbox1,
+   .projectsbox2 {
+       width: 100%; /* Full width for each column */
+       height: auto; /* Adjust height automatically */
+       gap: 20px; /* Smaller gap between projects */
+   }
 
-  .projectsubtitle {
-      font-size: 1.5rem; /* Reduce font size */
-      padding: 15px; /* Adjust padding */
-      background-color: rgb(50, 116, 144); /* Keep background color */
-      margin-top: -10px;
-      box-shadow: none; /* Remove box-shadow */
-  }
+ .project {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Ensures no overflow from the image */
+    border-radius: 10px; /* Matches image rounding */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-  .projectsbox {
-      display: flex;
-      flex-direction: column; /* Stack project boxes vertically */
-      gap: 20px;
-      height: auto; /* Allow flexible height */
-      width: 100%; /* Full width */
-      justify-content: center; /* Center content */
-  }
 
-  .projectsbox1, .projectsbox2 {
-      width: 90%; /* Make boxes full-width */
-      gap: 30px;
-  }
-  .projectsubtitle {
-     margin-top: 20px;}
+   .project-header {
+       font-size: 0.9rem; /* Slightly smaller font */
+       padding: 5px 10px; /* Adjust padding */
+   }
 
-  .project1, .project2, .project3, .project4 {
-      display: block; /* Change from flex to block for easier stacking */
-      width: 100%; /* Full width */
-      height: 250px; /* Flexible height */
-      padding: 10px;
-      margin-top: 20px; /* Add spacing */
-      border-radius: 10%; /* Adjust border-radius */
-      background-size: cover;
-      background-position: center;
-      box-shadow: none; /* Remove box-shadow */
-      cursor: pointer;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
+   .project1,
+   .project2,
+   .project3,
+   .project4 {
+       height: 300px; /* Match height of container */
+       width: 100%; /* Match container width */
+       background-size: cover; /* Ensure proper scaling of background images */
+       background-position: center;
+   }
 
-  .project1 img, .project2 img, .project3 img, .project4 img {
-      max-width: 100%; /* Scale images to fit */
-      max-height: 100%; /* Prevent overflow */
-  }
-
-  .project1:hover, .project2:hover, .project3:hover, .project4:hover {
-      transform: none; /* Remove 3D effects for better performance */
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Slight hover effect */
-  }
-
-  .project-link {
-      display: block;
-      height: 100%;
+   .project img {
       width: 100%;
-      text-decoration: none;
+      height: 100%;
+      object-fit: cover;
+      object-position: center; /* Center the image */
+      display: block; /* Prevent unwanted extra space caused by inline-block */
+      border-radius: inherit; /* Ensure corners match container */
   }
+  
 
-  .projectsbox {
-      flex-direction: column; /* Stack the projects vertically */
-      gap: 10px;
-  }
-} 
+   .project:hover {
+       transform: scale(1.03); /* Slight zoom on hover */
+       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Lighter hover shadow */
+   }
+
+   .projectstitlebox {
+       padding: 10px;
+       gap: 15px; /* Reduce gap between title and subtitle */
+       box-shadow: 
+           0 5px 10px rgba(0, 0, 0, 0.1),
+           inset 0 1px 3px rgba(255, 255, 255, 0.3);
+   }
+
+   .projectstitle {
+       font-size: 1.5rem; /* Adjust font size */
+       padding: 20px; /* Smaller padding */
+       margin: 0; /* Remove margin */
+       box-shadow:
+           -2px -2px 0 rgba(40, 92, 115, 0.8),
+           inset 0 0 15px rgba(255, 255, 255, 0.2),
+           0 0 20px rgba(128, 218, 255, 0.3);
+   }
+
+   .projectsubtitle {
+       font-size: 1rem; /* Adjust font size */
+       padding: 15px; /* Smaller padding */
+       margin-top: 5px; /* Smaller gap above */
+       box-shadow:
+           -2px -2px 0 rgba(40, 92, 115, 0.8),
+           inset 0 0 10px rgba(255, 255, 255, 0.2),
+           0 0 15px rgba(128, 218, 255, 0.3);
+   }
+}
+
 @media screen and (max-width: 768px) {
    #boxContact {
        min-height: 100vh;
@@ -1822,7 +1931,7 @@ margin-bottom: 30px;
        display: flex;
        flex-direction: row;
        gap: 10px;
-       padding: 8px 15px;
+       padding: 8px 20px;
        background: rgba(57, 56, 56, 0.95);
        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
        width: 90%;
