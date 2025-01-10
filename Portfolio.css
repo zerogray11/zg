@@ -1705,7 +1705,7 @@ margin-bottom: 30px;
    .projectsbox {
        flex-direction: column; /* Stack the projects vertically */
        align-items: center; /* Center-align the projects */
-       gap: 100px !important; /* Adjust gap between projects */
+        /* Adjust gap between projects */
        width: 100%; /* Take full width */
        height: auto; /* Adjust to content height */
        margin-top: 20px;
