@@ -1054,12 +1054,12 @@ background-size: cover;
    border-radius: 90%;
    
     height: fit-content;
-    width: 10%;
+    width: fit-content;
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    gap:15px;
+    gap:5px;
     perspective: 1000px;
     transform-style: preserve-3d;
     
@@ -1092,10 +1092,10 @@ background-size: cover;
     font-size: 1rem;
     font-weight: 530;
     color:white;
-   margin-top: -20px;
+   
     font-family: 'Orbitron', sans-serif;
     text-align: center;
-    margin-left: 15px;
+    
     
  }
  #Content{
