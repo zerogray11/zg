@@ -20,6 +20,7 @@ body, html {
     background-size: cover;
     background-position: 0 0;
     animation: moveClouds 30s linear infinite;
+    z-index: 800;
     
  }
  @keyframes moveClouds {
@@ -292,6 +293,8 @@ p {
     /*background:linear-gradient(45deg, rgba(32, 54, 77, 0.9), rgba(98, 120, 142, 0.85), rgba(50, 68, 87, 0.8), rgba(34, 50, 65, 0.85));*/
      align-items: center;
     background-size: cover;
+    z-index: 1000 !important;
+   
  }
 
 
@@ -634,20 +637,31 @@ width: fit-content;
 }
 
  
- 
+#background-video {
+   position: absolute;  /* Position the video in the background */
+   top: 0;
+   left: 0;
+   width: 100%;  /* Stretch to cover the width */
+   height: 100%; /* Stretch to cover the height */
+   object-fit: cover; /* Ensure the video fills the container, preserving aspect ratio */
+   z-index: -1; /* Send the video behind the content */
+ }
+
  #boxProjects{
     height:auto;
-    background-image: url(darkback.mp4);
-    background-size: cover;
-    background-position: 0 0;
-    animation: moveClouds 30s linear infinite;
+    background: url('darkback.mp4') no-repeat center center/cover;
+   
     display: flex;
     flex-direction: column;
     align-items: center;
-   
-   
- 
- 
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+
+ }
+ #boxProjects > * {
+   position: relative;  /* Ensures that the content appears above the background */
+   z-index: 2; /* Content above the video */
  }
  .projectstitlebox{
     display: flex;
@@ -1113,18 +1127,11 @@ padding: 30px !important;
        rgba(173, 216, 230, 0.2), 
        rgba(255, 255, 255, 0)
    );
-   animation: rotateGlow 6s linear infinite;
-   transform-origin: center;
+  
+   
 }
 
-@keyframes rotateGlow {
-   from {
-       transform: rotate(0deg);
-   }
-   to {
-       transform: rotate(360deg);
-   }
-}
+
  
  .pmessage{
     height:30%;
@@ -1720,6 +1727,8 @@ margin-bottom: 30px;
    }
 
  .project {
+   object-fit: contain !important;
+   aspect-ratio: 16/9; /* Maintain 16:9 aspect ratio */
     position: relative;
     width: 100%;
     height: 100%;
