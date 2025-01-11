@@ -18,22 +18,12 @@ body, html {
     position: relative;
     background-image: url(greycloud.png);
     background-size: cover;
-    background-position: 0 0;
-    animation: moveClouds 30s linear infinite;
+    background-position:center;
+    
     z-index: 800;
     
  }
- @keyframes moveClouds {
-    0% {
-        background-position: 0 0;  
-    }
-    50% {
-        background-position: 100% 0; 
-    }
-    100% {
-        background-position: 0 0; 
-    }
- }
+ 
  #boxIntro {
    animation: border-glow 0.5s ease-in-out infinite;
    display: flex;
@@ -289,7 +279,7 @@ p {
     
     display: flex;
     flex-direction: column;
-    background-image: url(aurore.jpeg);
+    background-image: url(auroranova.mov);
     /*background:linear-gradient(45deg, rgba(32, 54, 77, 0.9), rgba(98, 120, 142, 0.85), rgba(50, 68, 87, 0.8), rgba(34, 50, 65, 0.85));*/
      align-items: center;
     background-size: cover;
@@ -302,7 +292,7 @@ p {
     height: 35%;
    width: 100%;
   
- background: linear-gradient(90deg, rgba(131,58,180,1) 25%, rgba(78,169,212,1) 73%, rgba(29,253,169,1) 99%, rgba(69,252,153,1) 100%);
+ background:inherit;
     gap: 15px;
     display: flex;
     flex-direction: column;
@@ -546,7 +536,7 @@ width: fit-content;
     border-radius: 5px;      
     width: auto;        
    
- background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(78,169,212,1) 49%, rgb(16, 199, 132) 99%, rgb(12, 60, 35) 100%);
+    background: rgba(39, 38, 38, 0.9);
  
  
     transition: background-color 0.3s ease;
@@ -624,7 +614,8 @@ width: fit-content;
     overflow: hidden;
 
    
-    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(78,169,212,1) 49%, rgb(16, 199, 132) 99%, rgb(12, 60, 35) 100%);
+    background: rgba(39, 38, 38, 0.9);
+    
  }
 
 
@@ -649,7 +640,7 @@ width: fit-content;
 
  #boxProjects{
     height:auto;
-    background: url('darkback.mp4') no-repeat center center/cover;
+    background: url('darkbackfinal.mov') no-repeat center center/cover;
    
     display: flex;
     flex-direction: column;
@@ -661,7 +652,7 @@ width: fit-content;
  }
  #boxProjects > * {
    position: relative;  /* Ensures that the content appears above the background */
-   z-index: 2; /* Content above the video */
+   z-index: 1000; /* Content above the video */
  }
  .projectstitlebox{
     display: flex;
@@ -669,18 +660,7 @@ width: fit-content;
     height:fit-content;
     width:100%;
     align-items: center;
-    gap:20px;
-    transform-style: preserve-3d;
-      padding: 50px;
-    border-radius: 10px;
-    box-shadow: 
-        0 10px 20px rgba(0,0,0,0.1),
-        0 6px 6px rgba(0,0,0,0.1),
-        inset 0 2px 4px rgba(255,255,255,0.5);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    background-color: rgba(119, 181, 210, 0.1);
+    margin-top: 40px;
     
    
  }
@@ -701,7 +681,7 @@ width: fit-content;
    justify-content: center;
    align-items: center;
    border-radius: 25%;
-   background: linear-gradient(135deg, #2C2F45, #35546A, #6B9BB5);
+   background: linear-gradient(135deg, rgb(44, 47, 69,0.3), rgb(53, 84, 106,0.3), rgb(107, 155, 181,0.3));
 
 
    box-shadow: 
@@ -1009,30 +989,20 @@ transition: transform 0.3s ease, box-shadow 0.3s ease;
 
 
 
- #boxContact{
- height:fit-content;
- background-image: url(darkback.mp4);
-background-size: cover;
- display: flex;
- flex-direction: column;
- align-items: center !important;
- justify-content: space-between!important;
  
- 
- }
 
 
 /* For a more dynamic effect, you can add a subtle animation */
 
 
  .ctitle{
-  
+   border: purple 1px solid;
    background: inherit;
 
 
-  margin-top: 50px!important;
+  margin-top: 50px;
   
-  padding: 30px;
+  padding: 20px;
  
 
    border-radius: 90%;
@@ -1047,7 +1017,7 @@ background-size: cover;
     perspective: 1000px;
     transform-style: preserve-3d;
     
-    border-radius: 10px;
+    
     box-shadow: 
         0 10px 20px rgba(0,0,0,0.1),
         0 6px 6px rgba(0,0,0,0.1),
@@ -1067,6 +1037,7 @@ background-size: cover;
     color: white;
     font-family: 'Orbitron', sans-serif;
     text-align: center;
+    
    
  }
  .contactTitle svg{
@@ -1092,12 +1063,13 @@ background-size: cover;
    justify-content: space-evenly!important;
 padding: 30px;
 gap: 20px;
+margin-top: 0px;
   
  }
  #connect{
-   margin-top: 30px;
+  
    margin-bottom: 5PX;
-   background: linear-gradient(135deg, #1B1D36, #23394F, #567D95, #82C0D9);
+   background: linear-gradient(135deg, rgb(27, 29, 54), rgb(35, 57, 79), rgb(56, 16, 71), rgb(64, 25, 81));
 
 padding: 30px !important;
     height:fit-content;
@@ -1107,29 +1079,14 @@ padding: 30px !important;
     justify-content: flex-start;
     align-items: flex-start;
     border-radius: 20%;
-   padding: 10px;
    box-shadow: 
         0 0 15px rgba(173, 216, 230, 0.5), /* Soft light blue glow */
         0 0 30px rgba(173, 216, 230, 0.4), 
-        0 0 45px rgba(135, 206, 250, 0.3);
+        0 0 45px rgba(127, 29, 149, 0.3);
   
  }
  
- #connect::before {
-   content: '';
-   position: absolute;
-   top: -50%;
-   left: -50%;
-   width: 200%;
-   height: 200%;
-   background: radial-gradient(circle, 
-       rgba(135, 206, 250, 0.4), 
-       rgba(173, 216, 230, 0.2), 
-       rgba(255, 255, 255, 0)
-   );
-  
-   
-}
+ 
 
 
  
@@ -1239,18 +1196,20 @@ textarea {
 
 
 .sendmessage {
+   border: purple 0.5px solid;
    margin-top: 20px;
    align-self: center; /* Centers the button */
    font-size: 1rem;
    text-align: center;
+   padding: 5px;
   margin-left: 25%;
-   border: 2px solid white;
+  
    font-family: 'Orbitron', sans-serif;
    font-weight: 550;
    border-radius: 10px;
    cursor: pointer;
-   background: linear-gradient(to right, rgba(186, 223, 255, 0.8), rgba(102, 153, 204, 0.8));
-   color: black;
+   background: linear-gradient(135deg, rgb(27, 29, 54), rgb(35, 57, 79), rgb(56, 16, 71), rgb(64, 25, 81));
+   color: white;
    box-shadow: 
        0 10px 20px rgba(0, 0, 0, 0.1),
        inset 0 2px 4px rgba(255, 255, 255, 0.5);
