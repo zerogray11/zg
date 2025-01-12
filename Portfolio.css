@@ -256,35 +256,46 @@ p {
     text-shadow: 0 0 8px rgba(200, 200, 200, 1), 0 0 12px rgba(200, 200, 200, 0.7); /* Enhanced icy glow */
  }
  .hidden-box {
-    position: fixed;
-    top:30px;
-   left:50%;
-   transform: translate(-50%, -50%);
+   position: fixed;
+   top: 0;
+   right: 0;
    text-align: center;
-    width:20%;
-    height: fit-content;
-    padding: 10px;
-    gap: 15px!important;
-    background-color:rgb(115, 105, 247);
-    color: white;
-    border-radius: 8px;
-    display: none; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000; 
-    display: flex;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out, display 0s 0.3s;
-    flex-direction: column;
-    
-    align-items: center;
-    
- 
- 
-  }
+   width: fit-content;
+   height: fit-content;
+   padding: 10px;
+   gap: 15px!important;
+   background-color: rgba(57, 44, 243, 0.6);
+   color: white;
+   border-radius: 8px;
+   display: none; 
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   z-index: 1000; 
+   opacity: 0;
+   transition: opacity 0.3s ease-in-out, display 0s 0.3s;
+   flex-direction: column;
+   align-items: center;
+}
+
+/* Ensure the links inside the hidden box are aligned in a column */
+.hidden-box a {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 5px 0; /* Adds space between items */
+   text-decoration: none;
+   color: white;
+   gap: 15px;
+   
+}
+
+
   .hidden-box i {
    color: white; /* Default color for all icons */
-   transition: color 0.3s ease; /* Smooth transition for color change */
+   transition: color 0.3s ease;
+   
+ /* Smooth transition for color change */
 }
+
   .hidden-box > * {
     /* Ensure all direct children of .hidden-box are flex items */
     display: inline-block; /* Ensure items stay in a row */
@@ -1501,11 +1512,11 @@ margin-bottom: 30px;
    }
 
    .hey {
-       font-size: 1.5rem !important; /* Smaller font for titles */
+       font-size: 1.3rem !important; /* Smaller font for titles */
    }
 
    p {
-       font-size: 0.9rem; /* Smaller font for text */
+       font-size: 0.7rem; /* Smaller font for text */
        margin-left: 20px;
        text-indent: 10px;
    }
@@ -1758,18 +1769,21 @@ margin-bottom: 30px;
 /* Media Query for Mobile Screens */
 @media (max-width: 768px) {
    #boxProjects {
+      object-fit: contain !important;
        height: auto; /* Allow height to adjust */
        background-size: cover;
        padding: 10px;
        flex-direction: column;
        justify-content: center;
-       align-items: center; /* Ensure content is centered */
+       align-items: center;
+       width: 100%;; /* Ensure content is centered */
    }
 
    .projectsbox {
        flex-direction: column; /* Stack the projects vertically */
        align-items: center;
-       justify-content: center; /* Center-align the projects */
+       justify-content: center;
+       max-width: 100% !important; /* Center-align the projects */
        width: 100%; /* Full width */
        height: auto;
        margin-top: 20px;
@@ -1779,7 +1793,11 @@ margin-bottom: 30px;
    .projectsbox2 {
        width: 100%; /* Full width for each box */
        height: auto; /* Adjust to content height */
-       gap: 50px; /* Adjust the gap between projects */
+       gap: 50px; 
+       flex-direction: column;
+       align-items: center; /* Center align the boxes inside */
+       justify-content: center;
+       /* Adjust the gap between projects */
    }
 
    .project {
