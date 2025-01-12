@@ -351,10 +351,16 @@ p {
  color: #f5f5f5;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /
  
+}#description {
+   margin-top: 0 !important; /* No extra margin on top */
+}
+
+#skills {
+   margin-top: 0 !important; /* No extra margin on top */
 }
  
  #aboutInfo{
-  
+  margin-top: 20px;
     width:fit-content;
     height: fit-content;
    justify-content: space-evenly;
