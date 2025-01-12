@@ -33,12 +33,12 @@ body, html {
    background-color: rgba(255, 255, 255, 0.8);
    margin: 0 auto;
    width: 90%;
-   min-height: fit-content; /* Allows height to grow with content */
-   height: auto;
+   height: fit-content; /* Allows height to grow with content */
+   
    gap: 10px;
    perspective: 1000px;
    transform-style: preserve-3d;
-   padding: 20px;
+   padding: 10px;
    border-radius: 10px;
    box-shadow: 
        0 10px 20px rgba(0,0,0,0.1),
@@ -46,8 +46,8 @@ body, html {
        inset 0 2px 4px rgba(255,255,255,0.7);
    transition: all 0.3s ease;
    position: relative;
-   overflow: hidden;
-   position: relative;
+  
+   
 }
  
  
@@ -70,7 +70,7 @@ p {
    margin-top: 20px;
    margin-left: 40px;
    text-indent: 20px;
-   font-size: 1rem;
+   font-size: 1rem !important;
    font-weight: 500;
 }
  
@@ -161,8 +161,8 @@ p {
     display: flex;
     flex-direction: row;
     width:100%;
-   justify-content: space-between;
-   margin-top: 10px;
+   justify-content: center;
+   margin-top: 40px;
  }
  
  
@@ -187,8 +187,9 @@ p {
     margin-left:20px;
     margin-bottom: 10px;
     font-family:'Orbitron', sans-serif;
-   font-size: 2 rem;
+   font-size: 2.5rem !important;
    color:lightslategray;
+   background-color: white;
    font-weight:550;
    padding: 8px;
    animation: border-glow 0.5s ease-in-out infinite;
@@ -1472,7 +1473,7 @@ margin-bottom: 30px;
    }
 
    .hey {
-       font-size: 1rem !important; /* Smaller font for titles */
+       font-size: 1.5rem !important; /* Smaller font for titles */
    }
 
    p {
