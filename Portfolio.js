@@ -388,4 +388,5 @@ document.addEventListener('DOMContentLoaded', function () {
     // Additional touch-specific cleanup
     document.addEventListener('touchmove', hideTooltip, { passive: true });
     document.addEventListener('touchend', hideTooltip, { passive: true });
+    
 });
