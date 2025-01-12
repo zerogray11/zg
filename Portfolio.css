@@ -335,21 +335,13 @@ p {
  margin-top: 5px;
  font-weight: 550;
  font-family: 'Orbitron', sans-serif;
- font-size: 3.5rem;
+ font-size: 3.7rem;
  
  color: #f5f5f5;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /
  
 }
- .miniabout{
- font-style: italic;
- font-family: 'Orbitron', sans-serif;
- font-weight: 500;
- font-size: 1.5rem;
- align-items: center;
- color: #f5f5f5;;
  
- }
  #aboutInfo{
   
     width:fit-content;
@@ -720,25 +712,24 @@ width: fit-content;
    position: relative;  /* Ensures that the content appears above the background */
    z-index: 2; /* Content above the video */
  }
- .projectstitlebox{
-    display: flex;
-    flex-direction: column;
-    height:fit-content;
-    width:100%;
-    align-items: center;
-    margin-top: 40px;
-    
-   
- }
- .projectstitlebox,
+ .projectstitlebox {
+   display: flex;
+   flex-direction: column;
+   height: fit-content;
+   width: 100%;
+   align-items: center;
+   margin-top: 40px;
+}
+
+.projectstitlebox,
 .projectsbox,
 #title,
 #Content {
-    position: relative!important;
-    z-index: 2!important;
+   position: relative !important;
+   z-index: 2 !important;
 }
- .projectstitle {
-   
+
+.projectstitle {
    font-size: 3rem;
    margin-top: -20px;
    font-weight: 600;
@@ -754,33 +745,34 @@ width: fit-content;
    justify-content: center;
    align-items: center;
    border-radius: 25%;
-   background: linear-gradient(135deg, rgb(44, 47, 69,0.3), rgb(53, 84, 106,0.3), rgb(107, 155, 181,0.3));
-
-
+   background: linear-gradient(135deg, rgba(44, 47, 69, 0.6), rgba(53, 84, 106, 0.6), rgba(107, 155, 181, 0.6));
+   
+   /* Glow effect */
    box-shadow: 
-        0 0 15px rgba(173, 216, 230, 0.5), /* Soft light blue glow */
-        0 0 30px rgba(173, 216, 230, 0.4), 
-        0 0 45px rgba(135, 206, 250, 0.3);
+       0 0 15px rgba(173, 216, 230, 0.7), /* Soft light blue glow */
+       0 0 30px rgba(173, 216, 230, 0.6),
+       0 0 45px rgba(135, 206, 250, 0.5),
+       0 0 60px rgba(135, 206, 250, 0.4); /* Stronger outer glow */
    
-   backdrop-filter: blur(5px);
-   
+   /* Soft backdrop for futuristic depth */
+   backdrop-filter: blur(6px);
+
+   /* Adds a subtle 3D effect */
+   transform: translateZ(0);
+   perspective: 500px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-
-/* Optional: Add hover effects */
-.projectstitle:hover, .projectsubtitle:hover {
-   text-shadow:
-       1px 1px 2px #ffffff,
-       2px 2px 2px rgba(128, 218, 255, 0.9),
-       3px 3px 3px rgba(128, 218, 255, 0.7),
-       0 0 25px rgba(128, 218, 255, 0.8);
-   box-shadow:
-       -3px -3px 0 0 rgba(40, 92, 115, 1),
-       -5px -5px 0 0 rgba(30, 69, 86, 0.9),
-       -7px -7px 0 0 rgba(32, 75, 93, 0.8),
-       inset 0 0 25px rgba(255, 255, 255, 0.4),
-       0 0 35px rgba(128, 218, 255, 0.5);
+/* Hover Effect for Interactivity and Depth */
+.projectstitle:hover {
+   transform: scale(1.05) rotateY(10deg) rotateX(10deg); /* Slight zoom and 3D tilt */
+   box-shadow: 
+       0 0 20px rgba(173, 216, 230, 0.8),
+       0 0 40px rgba(173, 216, 230, 0.7),
+       0 0 60px rgba(135, 206, 250, 0.6),
+       0 0 80px rgba(135, 206, 250, 0.5); /* Intense glowing effect */
 }
+
  
 .projectsbox {
    flex-direction: column; /* Stack the projects vertically */
@@ -995,19 +987,36 @@ transition: transform 0.3s ease, box-shadow 0.3s ease;
 
 .project-header {
    position: absolute;
-   top: 0; /* Change from -30px to 0 */
+   top: 0; /* Position the header at the top */
    left: 0;
    width: 100%;
-   background-color:#131f6a;
+   background: linear-gradient(135deg, rgba(44, 47, 69, 0.8), rgba(53, 84, 106, 0.8), rgba(107, 155, 181, 0.8)); /* Similar gradient as title */
    color: white;
-   padding: 3px 5px;
+   padding: 5px 10px; /* Increase padding for a balanced look */
    border-radius: 0 0 10px 10px; /* Round only bottom corners */
    font-size: 1rem;
    text-align: center;
    z-index: 10;
    font-weight: 520;
    font-family: 'Orbitron', sans-serif;
-  
+
+   /* Glow effect */
+   box-shadow: 
+      0 0 10px rgba(173, 216, 230, 0.7), /* Soft light blue glow */
+      0 0 20px rgba(173, 216, 230, 0.6),
+      0 0 30px rgba(135, 206, 250, 0.5);
+
+   backdrop-filter: blur(6px); /* Slight blur effect to match title's futuristic look */
+   transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect to match the title's interactivity */
+.project-header:hover {
+   transform: scale(1.05) rotateY(10deg) rotateX(10deg); /* Slight zoom and 3D tilt */
+   box-shadow: 
+      0 0 20px rgba(173, 216, 230, 0.8),
+      0 0 40px rgba(173, 216, 230, 0.7),
+      0 0 60px rgba(135, 206, 250, 0.6); /* Intense glowing effect */
 }
 
 /* Header always visible */
@@ -1067,10 +1076,9 @@ transition: transform 0.3s ease, box-shadow 0.3s ease;
 
 /* For a more dynamic effect, you can add a subtle animation */
 
-
 .ctitle {
-   border: 2px solid purple;
-   background: inherit;
+   border: 2px solid #5f5fff; /* Cool space-like color */
+   background: linear-gradient(45deg, #2e2e8c, #101035); /* Deep space gradient */
    margin-top: 50px;
    padding: 20px;
    border-radius: 50%;
@@ -1080,27 +1088,46 @@ transition: transform 0.3s ease, box-shadow 0.3s ease;
    justify-content: center;
    flex-direction: column;
    text-align: center;
-   gap: 8px; /* Slightly increased for a more balanced look */
-   perspective: 1200px; /* Increased for a more defined 3D effect */
+   gap: 8px;
+   perspective: 1200px;
    transform-style: preserve-3d;
    box-shadow: 
       0 10px 30px rgba(0, 0, 0, 0.1),
       0 4px 10px rgba(0, 0, 0, 0.05),
-      inset 0 3px 6px rgba(255, 255, 255, 0.5);
+      inset 0 3px 6px rgba(255, 255, 255, 0.5),
+      0 0 20px rgba(255, 255, 255, 0.3); /* Glowing effect */
    transition: transform 0.3s ease, box-shadow 0.3s ease;
    position: relative;
    overflow: hidden;
-   cursor: pointer; /* Adds interactivity */
+   cursor: pointer;
 }
+
 .contactTitle {
-   font-size: 2.2rem; /* Slightly larger for more impact */
-   font-weight: 600; /* Bold but sleek */
-   color: white;
+   font-size: 2.2rem;
+   font-weight: 600;
+   color: #fff;
    font-family: 'Orbitron', sans-serif;
    text-align: center;
-   letter-spacing: 1px; /* Adds a bit of space for a modern, clean look */
-    /* Adds a modern, sleek touch */
+   letter-spacing: 2px; /* Increased spacing for futuristic feel */
+   text-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(0, 0, 255, 0.6); /* Space-like glowing effect */
+   transition: all 0.3s ease-in-out;
 }
+
+.contactTitle svg {
+   margin-right: 10px;
+}
+
+/* Hover effect for interactivity and added space effect */
+.ctitle:hover {
+   transform: rotateY(15deg) rotateX(15deg); /* Adds a dynamic 3D tilt */
+   box-shadow: 
+      0 10px 40px rgba(0, 0, 0, 0.3),
+      0 10px 20px rgba(0, 0, 0, 0.2),
+      inset 0 4px 8px rgba(255, 255, 255, 0.4),
+      0 0 30px rgba(0, 255, 255, 0.6); /* Glowing and tilting effect */
+}
+
+
  .contactTitle svg{
     margin-right: 10px;
  }
@@ -1114,6 +1141,7 @@ transition: transform 0.3s ease, box-shadow 0.3s ease;
     
     
  }
+
  #Content{
   
   height: 70%;
@@ -1561,7 +1589,7 @@ margin-bottom: 30px;
    }
 
    .about {
-       font-size: 2rem; /* Reduce title size */
+       font-size: 2.5rem; /* Reduce title size */
    }
 
    .miniabout {
