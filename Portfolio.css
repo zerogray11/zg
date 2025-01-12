@@ -96,22 +96,44 @@ p {
  .btn-intro {
    font-family: 'Orbitron', sans-serif;
    font-weight: 500;
-   width: 190px;
-   height: 43px;
-   font-size: 16px;
-   border-radius: 99%;
-   background-color: #444444;
-   border: 2.5px solid white;
-   color: white;
-   text-shadow: 0 0 5px rgba(110, 110, 110, 0.5), 0 0 10px rgba(150, 150, 150, 0.5);
-   transition: all 0.3s ease;
+   width: 220px;
+   height: 50px;
+   font-size: 18px;
+   border-radius: 30px;  /* Rounded corners for a modern feel */
+   background-color: #2c3e50;  /* Dark blue-grey background */
+   border: 2px solid #1abc9c;  /* Bluish-green border */
+   color: #ecf0f1;  /* Soft light grey text */
+   text-shadow: 0 0 8px rgba(255, 255, 255, 0.4), 0 0 12px rgba(255, 255, 255, 0.3);  /* Soft glow around text */
+   transition: all 0.3s ease-in-out;
    cursor: pointer;
-   margin-top: auto; /* Pushes the button to the bottom */
-   margin-bottom: 20px; /* Adds spacing from the box's bottom */
-   position: relative; /* Ensures button remains inside the box */
+   margin-top: auto;
+   margin-bottom: 20px;
+   position: relative;
    outline: none;
-   transform-origin: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;  /* Centers the text inside the button */
 }
+
+.btn-intro:hover {
+   background-color: #34495e;  /* Darker grey-blue background on hover */
+   border-color: #1abc9c;  /* Maintains the bluish-green border */
+   box-shadow: 0 0 15px rgba(26, 188, 156, 0.6), 0 0 30px rgba(26, 188, 156, 0.8);  /* Glowing bluish-green effect */
+   transform: scale(1.05);  /* Slight enlargement on hover */
+}
+
+.btn-intro:active {
+   background-color: #333333;  /* Darker on click */
+   transform: scale(1);  /* Reset scale on click */
+}
+
+
+
+
+
+
+
+
 
 
 .btn-intro .ripple {
@@ -126,8 +148,7 @@ p {
 .btn-intro.clicked {
     transform: scale(0.95);
     box-shadow: 0 0 10px rgba(100, 100, 100, 0.3) inset;
-}
-
+} 
 @keyframes ripple {
     to {
         transform: scale(4);
@@ -166,7 +187,7 @@ p {
     margin-left:20px;
     margin-bottom: 10px;
     font-family:'Orbitron', sans-serif;
-   font-size: 1.5 rem;
+   font-size: 2 rem;
    color:lightslategray;
    font-weight:550;
    padding: 8px;
@@ -239,9 +260,11 @@ p {
    left:50%;
    transform: translate(-50%, -50%);
    text-align: center;
-    width:350px;
-    padding: 15px;
-    background-color:slategray;
+    width:20%;
+    height: fit-content;
+    padding: 10px;
+    gap: 15px!important;
+    background-color:rgb(48, 39, 174);
     color: white;
     border-radius: 8px;
     display: none; 
@@ -251,7 +274,9 @@ p {
     opacity: 0;
     transition: opacity 0.3s ease-in-out, display 0s 0.3s;
     flex-direction: row;
-    gap:10px;
+    justify-content: space-between;
+    align-items: center;
+    
  
  
   }
@@ -279,7 +304,7 @@ p {
     
     display: flex;
     flex-direction: column;
-    background-image: url(auroranova.mov);
+    
     /*background:linear-gradient(45deg, rgba(32, 54, 77, 0.9), rgba(98, 120, 142, 0.85), rgba(50, 68, 87, 0.8), rgba(34, 50, 65, 0.85));*/
      align-items: center;
     background-size: cover;
@@ -508,7 +533,7 @@ width: fit-content;
    position: relative;
     text-align: center;
     font-family: 'Orbitron', sans-serif;
-    color:rgb(153, 246, 13);
+    color:white;
     height:fit-content;
     width: fit-content;
     font-weight: 550;
@@ -536,8 +561,18 @@ width: fit-content;
     border-radius: 5px;      
     width: auto;        
    
-    background: rgba(39, 38, 38, 0.9);
- 
+    background: linear-gradient(135deg, 
+    #001b2e 0%,   /* Deep dark blue (base of the sky) */
+    #003b5c 15%,  /* Rich navy transitioning smoothly */
+    #007092 35%,  /* Bright turquoise glow */
+    #00b4d8 50%,  /* Radiant aqua light */
+    #6a28a3 70%,  /* Ethereal purple hue */
+    #440079 85%,  /* Deep purple depth */
+    #220043 100%  /* Dark purple for subtle contrast */
+);
+
+
+
  
     transition: background-color 0.3s ease;
  }
@@ -599,7 +634,7 @@ width: fit-content;
     height:fit-content;
     width: fit-content;
     cursor: pointer;
-    color:greenyellow;
+    color:white;
     perspective: 1000px;
     transform-style: preserve-3d;
     padding: 10px 20px; 
@@ -614,7 +649,15 @@ width: fit-content;
     overflow: hidden;
 
    
-    background: rgba(39, 38, 38, 0.9);
+    background: linear-gradient(135deg, 
+    #001b2e 0%,   /* Deep dark blue (base of the sky) */
+    #003b5c 15%,  /* Rich navy transitioning smoothly */
+    #007092 35%,  /* Bright turquoise glow */
+    #00b4d8 50%,  /* Radiant aqua light */
+    #6a28a3 70%,  /* Ethereal purple hue */
+    #440079 85%,  /* Deep purple depth */
+    #220043 100%  /* Dark purple for subtle contrast */
+);
     
  }
 
@@ -925,7 +968,7 @@ transition: transform 0.3s ease, box-shadow 0.3s ease;
    top: 0; /* Change from -30px to 0 */
    left: 0;
    width: 100%;
-   background-color: rgba(54, 67, 92, 0.8);
+   background-color: rgba(0, 26, 106, 0.8);
    color: white;
    padding: 3px 5px;
    border-radius: 0 0 10px 10px; /* Round only bottom corners */
@@ -996,7 +1039,7 @@ transition: transform 0.3s ease, box-shadow 0.3s ease;
 
 
  .ctitle{
-   border: purple 1px solid;
+   border: purple 2px solid;
    background: inherit;
 
 
@@ -1069,7 +1112,7 @@ margin-top: 0px;
  #connect{
   
    margin-bottom: 5PX;
-   background: linear-gradient(135deg, rgb(27, 29, 54), rgb(35, 57, 79), rgb(56, 16, 71), rgb(64, 25, 81));
+   background: linear-gradient(135deg, #082b44, #131f6a, #6a218e, #09162f, #270b50);
 
 padding: 30px !important;
     height:fit-content;
@@ -1194,28 +1237,31 @@ textarea {
    width: max-content;
 }
 
-
+#sendcontainer{display: flex;
+   justify-content: center;  /* Centers horizontally */
+   align-items: center;      /* Centers vertically */
+          /* Full viewport height */
+}
 .sendmessage {
-   border: purple 0.5px solid;
+   border: purple 2px solid;
    margin-top: 20px;
    align-self: center; /* Centers the button */
    font-size: 1rem;
    text-align: center;
-   padding: 5px;
-  margin-left: 25%;
+   padding: 10px;
+  
   
    font-family: 'Orbitron', sans-serif;
    font-weight: 550;
    border-radius: 10px;
    cursor: pointer;
-   background: linear-gradient(135deg, rgb(27, 29, 54), rgb(35, 57, 79), rgb(56, 16, 71), rgb(64, 25, 81));
+   background: linear-gradient(135deg, #082b44, #131f6a, #6a218e, #09162f, #270b50);
    color: white;
    box-shadow: 
        0 10px 20px rgba(0, 0, 0, 0.1),
        inset 0 2px 4px rgba(255, 255, 255, 0.5);
    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .sendmessage:hover {
    transform: scale(1.05);
    box-shadow: 
@@ -1440,7 +1486,7 @@ margin-bottom: 30px;
    #boxName {
       margin-bottom: 100px;
        margin-top: 20px;
-       font-size: 1rem; /* Reduce font size */
+       font-size: 2rem; /* Reduce font size */
        padding: 5px;
        background-color: white;
        
@@ -1472,7 +1518,7 @@ margin-bottom: 30px;
    .btn-intro {
       margin-top: auto; /* Pushes the button to the bottom */
        /* Spacing from the box's bottom */
-      width: 100%; /* Make the button full-width for better usability */
+      width:fit-content; /* Make the button full-width for better usability */
   }
 
    p {
@@ -1665,12 +1711,15 @@ margin-bottom: 30px;
        height: auto; /* Allow the height to adjust */
        background-size: cover;
        padding: 10px;
-       flex-direction: column; /* Already column for this section */
+       flex-direction: column;
+       justify-content: center;
+       align-items: center; /* Already column for this section */
    }
 
    .projectsbox {
        flex-direction: column; /* Stack the projects vertically */
-       align-items: center; /* Center-align the projects */
+       align-items: center; 
+       justify-content: center;/* Center-align the projects */
         /* Adjust gap between projects */
        width: 100%; /* Take full width */
        height: auto; /* Adjust to content height */
@@ -1733,16 +1782,14 @@ margin-bottom: 30px;
    }
 
    .projectstitlebox {
-       padding: 10px;
+     
        height: fit-content;
        gap: 15px; /* Reduce gap between title and subtitle */
-       box-shadow: 
-           0 5px 10px rgba(0, 0, 0, 0.1),
-           inset 0 1px 3px rgba(255, 255, 255, 0.3);
+      
    }
 
    .projectstitle {
-       font-size: 2rem; /* Adjust font size */
+       font-size: 3rem; /* Adjust font size */
        padding: 20px; /* Smaller padding */
        margin: 0; /* Remove margin */
        box-shadow:
@@ -1834,17 +1881,19 @@ margin-bottom: 30px;
 }
 @media screen and (max-width: 768px) {
    #scrollBox {
+      width: fit-content;
+      height: fit-content;
        position: fixed;
        top: 0;
        left: 50%;
        transform: translateX(-50%) translateY(-100%);
        display: flex;
        flex-direction: row;
-       gap: 10px;
-       padding: 8px 20px;
-       background:slategray;
+      
+       
+       
        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-       width: 90%;
+       
        justify-content: center;
        transition: transform 0.3s ease;
        z-index: 1000;
@@ -1854,12 +1903,7 @@ margin-bottom: 30px;
        transform: translateX(-50%) translateY(0);
    }
 
-   #scrollBox h2 {
-       font-size: 0.6rem;
-       margin: 0;
-       padding: 5px 8px;
-   }
-
+  
    #scrollBox a {
        text-decoration: none;
    }
