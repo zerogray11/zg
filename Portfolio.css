@@ -1522,7 +1522,7 @@ margin-bottom: 30px;
    }
 
    p {
-       font-size: 0.7rem; /* Smaller font for text */
+       font-size: 0.7rem !important; /* Smaller font for text */
        margin-left: 20px;
        text-indent: 10px;
    }
