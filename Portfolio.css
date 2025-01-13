@@ -256,6 +256,7 @@ p {
     text-shadow: 0 0 8px rgba(200, 200, 200, 1), 0 0 12px rgba(200, 200, 200, 0.7); /* Enhanced icy glow */
  }
  .hidden-box {
+   border: silver 1px solid;
    position: fixed;
    top: 0;
    right: 0;
@@ -264,7 +265,7 @@ p {
    height: fit-content;
    padding: 10px;
    gap: 15px!important;
-   background-color: rgba(17, 126, 251, 0.7);
+   background-color: rgba(3, 76, 161, 0.6);
    color: white;
    border-radius: 8px;
    display: none; 
