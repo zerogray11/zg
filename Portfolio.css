@@ -1779,6 +1779,7 @@ margin-bottom: 30px;
 /* Media Query for Mobile Screens */
 @media (max-width: 768px) {
    #boxProjects {
+      overflow-x: hidden;
       object-fit: contain !important;
        height: auto; /* Allow height to adjust */
        background-size: cover;
