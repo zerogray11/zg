@@ -264,7 +264,7 @@ p {
    height: fit-content;
    padding: 10px;
    gap: 15px!important;
-   background-color: rgba(57, 44, 243, 0.6);
+   background-color: rgba(17, 126, 251, 0.7);
    color: white;
    border-radius: 8px;
    display: none; 
@@ -1024,19 +1024,20 @@ transition: transform 0.3s ease, box-shadow 0.3s ease;
       0 0 30px rgba(135, 206, 250, 0.5);
 
    backdrop-filter: blur(6px); /* Slight blur effect to match title's futuristic look */
-   transition: all 0.3s ease; /* Smooth transition */
-}
+   transition: transform 0.4s ease, opacity 0.4s ease, box-shadow 0.4s ease;}
+    /* Smooth transition */
+    .project-header:hover {
+      transform: translateY(-20px); /* Moves straight up by 20px */
+      opacity: 0; /* Gradually fades out */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Slightly increases shadow during the lift */
+   }
 
 /* Hover effect to match the title's interactivity */
 .project-header:hover {
-   transform: scale(1.05) rotateY(10deg) rotateX(10deg); /* Slight zoom and 3D tilt */
-   box-shadow: 
-      0 0 20px rgba(173, 216, 230, 0.8),
-      0 0 40px rgba(173, 216, 230, 0.7),
-      0 0 60px rgba(135, 206, 250, 0.6); /* Intense glowing effect */
+   transform: translateY(-20px); /* Moves upward */
+   opacity: 0; /* Gradually disappears */
+   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Slightly increases shadow while lifting */
 }
-
-/* Header always visible */
 .project .project-header {
    opacity: 1; /* Always visible */
    pointer-events: auto; /* Ensure interactions work */
@@ -1518,11 +1519,12 @@ margin-bottom: 30px;
    }
 
    .hey {
+      margin-top: 5px;
        font-size: 1.3rem !important; /* Smaller font for titles */
    }
 
    p {
-       font-size: 0.7rem !important; /* Smaller font for text */
+       font-size: 1rem !important; /* Smaller font for text */
        margin-left: 20px;
        text-indent: 10px;
    }
@@ -1576,16 +1578,18 @@ margin-bottom: 30px;
    }
 
    .hey {
-       font-size: 1rem !important; /* Smaller font size */
+       font-size: 1.2rem !important; /* Smaller font size */
    }
    .btn-intro {
       margin-top: auto; /* Pushes the button to the bottom */
        /* Spacing from the box's bottom */
-      width:fit-content; /* Make the button full-width for better usability */
+      width:min-content;
+      height: min-content; 
+      /* Make the button full-width for better usability */
   }
 
    p {
-       font-size: 0.8rem;
+       font-size: 1rem!important; /* Larger text for better readability */
    }
 }
 #boxIntro{
