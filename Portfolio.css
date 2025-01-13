@@ -1525,7 +1525,7 @@ margin-bottom: 30px;
    }
 
    p {
-       font-size: 1rem !important; /* Smaller font for text */
+       font-size: 0.8rem !important; /* Smaller font for text */
        margin-left: 20px;
        text-indent: 10px;
    }
@@ -1584,8 +1584,8 @@ margin-bottom: 30px;
    .btn-intro {
       margin-top: auto; /* Pushes the button to the bottom */
        /* Spacing from the box's bottom */
-      width:min-content;
-      height: min-content; 
+      width:fit-content;
+      height: fit-content; 
       /* Make the button full-width for better usability */
   }
 
