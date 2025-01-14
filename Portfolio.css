@@ -809,6 +809,8 @@ width: fit-content;
 
 .projectsbox1,
 .projectsbox2 {
+   height: auto;
+   width: auto;
    /* Adjust height automatically */
    gap: 20px; /* Smaller gap between projects */
 }
@@ -1332,7 +1334,7 @@ textarea {
      flex-direction: column;    
       justify-content: center;   
       align-items: center;
-        height: 25%;    
+        height: 28%;    
          width: 100%;    
           perspective: 1000px; 
             transform-style: preserve-3d; 
@@ -1770,6 +1772,7 @@ margin-bottom: 30px;
        width: 100%; /* Full width */
        height: auto;
        margin-top: 20px;
+       margin-right:8px;
    }
 
    .projectsbox1,
