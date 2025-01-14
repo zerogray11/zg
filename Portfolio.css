@@ -2110,7 +2110,7 @@ margin-bottom: 30px;
    #scrollBox a {
        text-decoration: none;
    }
-}
+
 
 #boxProjects {
    overflow-x: hidden;
@@ -2206,3 +2206,62 @@ margin-bottom: 30px;
 }
 
 
+#boxAbout {
+   height: auto; /* Allow the height to adjust to content */
+   padding: 20px; /* Add padding for better spacing on smaller screens */
+   background-size: cover; /* Ensure the background scales appropriately */
+}
+
+#aboutTitle {
+   height: fit-content; /* Allow flexible height */
+   
+   gap: 10px; /* Reduce gap for smaller screens */
+   border-radius: 20px;
+}
+
+.about {
+   font-size: 2.5rem; /* Reduce title size */
+}
+
+.miniabout {
+   font-size: 1rem; /* Adjust subtitle size */
+   margin-top: 10px;
+}
+
+#aboutInfo {
+ margin-top: 20px;
+
+   flex-direction: column; /* Stack items vertically */
+   align-items: center;
+   justify-content: center;
+   gap: 15px; /* Adjust spacing */
+}
+
+#description {
+   width: 50%; /* Adjust width to fit smaller screens */
+   max-width: none; /* Remove width restrictions */
+   margin-top: 20px;
+   padding: 10px;
+   margin-bottom: 40px;
+  
+}
+
+.descTitle {
+   font-size: 1.3rem; /* Adjust title size */
+   padding: 10px; /* Reduce padding */
+}
+
+.descp {
+   font-size: 0.9rem; /* Reduce text size */
+   padding: 15px; /* Adjust padding for smaller screens */
+   margin: 10px 0;
+}
+
+#skills {
+  margin-top: 40px;
+  margin-left: 20px;
+   padding: 15px;
+   max-height: none;
+   margin-bottom: 20px; /* Allow height to grow with content */
+}
+}
