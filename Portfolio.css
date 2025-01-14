@@ -2052,18 +2052,7 @@ margin-bottom: 30px;
        padding: 10px;
    }
 
-   .javascript,
-   .java,
-   .sql,
-   .html,
-   .css,
-   .nodejs,
-   .aws,
-   .photoshop {
-       font-size: 0.7rem;
-       padding: 8px;
-   }
-
+   
    /* Projects Section */
    #boxProjects {
        padding: 10px;
@@ -2122,4 +2111,98 @@ margin-bottom: 30px;
        text-decoration: none;
    }
 }
+
+#boxProjects {
+   overflow-x: hidden;
+   object-fit: contain !important;
+    height: auto; /* Allow height to adjust */
+    background-size: cover;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;; /* Ensure content is centered */
+}
+
+.projectsbox {
+    flex-direction: column; /* Stack the projects vertically */
+    align-items: center;
+    justify-content: center;
+    max-width: 100% !important; /* Center-align the projects */
+    width: 100%; /* Full width */
+    height: auto;
+    margin-top: 20px;
+    margin-right:12px;
+}
+
+.projectsbox1,
+.projectsbox2 {
+    width: 100%; /* Full width for each box */
+    height: auto; /* Adjust to content height */
+    gap: 50px; 
+    flex-direction: column;
+    align-items: center; /* Center align the boxes inside */
+    justify-content: center;
+    /* Adjust the gap between projects */
+}
+
+.project {
+    object-fit: contain !important;
+    aspect-ratio: 16/9; /* Maintain 16:9 aspect ratio */
+    position: relative;
+    width: 100%;
+    height: auto; /* Adjust height to content */
+    overflow: hidden; /* Ensure no overflow from the image */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 50px;
+}
+
+/* Adjust project header to be attached to the top of each project */
+.project-header {
+    font-size: 0.9rem; /* Slightly smaller font */
+    padding: 10px; /* Adjust padding for spacing */
+    text-align: center; /* Center align the header */
+    position: absolute;
+    top: 0px; /* Position header at the top */
+    left: 50%;
+    transform: translateX(-50%); /* Center the header horizontally */
+    background-color:#131f6a; /* Background color for visibility */
+    color: white;
+    width: 100%;
+}
+
+.project img {
+    width: 100%;
+    height: auto; /* Make the image responsive */
+    object-fit: cover; /* Ensure image covers the space */
+    object-position: center; /* Center the image */
+    display: block;
+    border-radius: inherit; /* Match the border radius of the project */
+}
+
+.project:hover {
+    transform: scale(1.03); /* Slight zoom on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Lighter hover shadow */
+}
+
+.projectstitlebox {
+    height: fit-content;
+    gap: 15px;
+}
+
+.projectstitle {
+    font-size: 3rem; /* Adjust font size */
+    padding: 20px;
+    margin: 0;
+    box-shadow:
+        -2px -2px 0 rgba(40, 92, 115, 0.8),
+        inset 0 0 15px rgba(255, 255, 255, 0.2),
+        0 0 20px rgba(128, 218, 255, 0.3);
+}
+
 
