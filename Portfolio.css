@@ -1571,7 +1571,7 @@ margin-bottom: 30px;
 }
 @media (max-width: 768px)  {
    #boxAbout {
-       height: auto; /* Allow the height to adjust to content */
+       height:fit-content; /* Allow the height to adjust to content */
        padding: 20px; /* Add padding for better spacing on smaller screens */
        background-size: cover; /* Ensure the background scales appropriately */
    }
@@ -2113,7 +2113,7 @@ margin-bottom: 30px;
 
 
 #boxProjects {
-   overflow-x: hidden;
+   
    object-fit: contain !important;
     height: auto; /* Allow height to adjust */
     background-size: cover;
@@ -2132,7 +2132,7 @@ margin-bottom: 30px;
     width: 100%; /* Full width */
     height: auto;
     margin-top: 20px;
-    margin-right:12px;
+   
 }
 
 .projectsbox1,
@@ -2207,7 +2207,7 @@ margin-bottom: 30px;
 
 
 #boxAbout {
-   height: auto; /* Allow the height to adjust to content */
+   height: fit-content; /* Allow the height to adjust to content */
    padding: 20px; /* Add padding for better spacing on smaller screens */
    background-size: cover; /* Ensure the background scales appropriately */
 }
