@@ -1584,7 +1584,7 @@ textarea {
        max-width: none; /* Remove width restrictions */
        margin-top: 20px;
        padding: 10px;
-       margin-bottom: 40px;
+       margin-bottom: 50px;
       
    }
 
@@ -1892,7 +1892,7 @@ textarea {
       max-width: none; /* Remove width restrictions */
       margin-top: 20px;
       padding: 10px;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
      
   }
 
