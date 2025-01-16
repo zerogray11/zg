@@ -1477,18 +1477,22 @@ textarea {
 @media screen and (max-width: 768px)  {
    #boxHome {
        flex-direction: column;
-       height: fit-content; /* Adjust height for smaller screens */
+       height: 100vh; /* Adjust height for smaller screens */
      /* Reduce gaps for better spacing */
        padding: 10px;
-       background-size: contain; /* Optimize background size */
+       background-size: contain;
+       gap: 80px; /* Optimize background size */
    }
-
+ .btn-intro{
+   margin-top: 5px;
+   font-size:1rem ;
+ }
    #boxIntro {
       
        width: 95%; /* Reduce width to fit smaller screens */
        padding: 10px;
        gap: 5px;
-margin-bottom: 30px;
+
    }
 
    .hey {
@@ -1497,7 +1501,7 @@ margin-bottom: 30px;
    }
 
    p {
-       font-size: 0.7rem !important; /* Smaller font for text */
+       font-size: 0.8rem !important; /* Smaller font for text */
        margin-left: 20px;
        text-indent: 10px;
    }
@@ -1522,19 +1526,15 @@ margin-bottom: 30px;
    }
 
    #boxName {
-      margin-bottom: 100px;
-       margin-top: 20px;
+      
+       
        font-size: 1.5rem; /* Reduce font size */
        padding: 5px;
        background-color: white;
        
    }
 
-   .Home, .About, .Projects, .Services, .Contact {
-       font-size: 0.6rem; /* Smaller font for menu items */
-       padding: 18px; /* Reduce padding */
-       
-   }
+  
 
    .hidden-box {
        width: 90%; /* Adjust width for smaller screens */
@@ -1544,31 +1544,9 @@ margin-bottom: 30px;
    }
 }
 
-/* Small Mobile Adjustments */
-@media screen and (max-width: 480px) {
-   #boxHome {
-       gap: 10%; /* Further reduce gaps */
-   }
 
-   .hey {
-       font-size: 1.2rem !important; /* Smaller font size */
-   }
-   .btn-intro {
-      font-size: 1.1rem;
-      margin-top: auto; /* Pushes the button to the bottom */
-       /* Spacing from the box's bottom */
-      width:fit-content;
-      height: fit-content; 
-      /* Make the button full-width for better usability */
-  }
+   
 
-   p {
-       font-size: 1rem!important; /* Larger text for better readability */
-   }
-}
-#boxIntro{
-   margin-bottom: 100px;
-}
 @media (max-width: 768px)  {
    #boxAbout {
        height:fit-content; /* Allow the height to adjust to content */
@@ -1594,7 +1572,7 @@ margin-bottom: 30px;
 
    #aboutInfo {
      margin-top: 20px;
-    
+    margin-bottom: 30px;
        flex-direction: column; /* Stack items vertically */
        align-items: center;
        justify-content: center;
@@ -1752,180 +1730,7 @@ margin-bottom: 30px;
   }
 
 /* Media Query for Mobile Screens */
-@media (max-width: 768px) and (max-width: 480px){
-   #boxProjects {
-      overflow-x: hidden;
-      object-fit: contain !important;
-       height: auto; /* Allow height to adjust */
-       background-size: cover;
-       padding: 10px;
-       flex-direction: column;
-       justify-content: center;
-       align-items: center;
-       width: 100%;; /* Ensure content is centered */
-   }
 
-   .projectsbox {
-       flex-direction: column; /* Stack the projects vertically */
-       align-items: center;
-       justify-content: center;
-       max-width: 100% !important; /* Center-align the projects */
-       width: 100%; /* Full width */
-       height: auto;
-       margin-top: 20px;
-       margin-right:12px;
-   }
-
-   .projectsbox1,
-   .projectsbox2 {
-       width: 100%; /* Full width for each box */
-       height: auto; /* Adjust to content height */
-       gap: 50px; 
-       flex-direction: column;
-       align-items: center; /* Center align the boxes inside */
-       justify-content: center;
-       /* Adjust the gap between projects */
-   }
-
-   .project {
-       object-fit: contain !important;
-       aspect-ratio: 16/9; /* Maintain 16:9 aspect ratio */
-       position: relative;
-       width: 100%;
-       height: auto; /* Adjust height to content */
-       overflow: hidden; /* Ensure no overflow from the image */
-       border-radius: 10px;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-       transition: transform 0.3s ease, box-shadow 0.3s ease;
-       margin-bottom: 50px;
-   }
-
-   /* Adjust project header to be attached to the top of each project */
-   .project-header {
-       font-size: 0.9rem; /* Slightly smaller font */
-       padding: 10px; /* Adjust padding for spacing */
-       text-align: center; /* Center align the header */
-       position: absolute;
-       top: 0px; /* Position header at the top */
-       left: 50%;
-       transform: translateX(-50%); /* Center the header horizontally */
-       background-color:#131f6a; /* Background color for visibility */
-       color: white;
-       width: 100%;
-   }
-
-   .project img {
-       width: 100%;
-       height: auto; /* Make the image responsive */
-       object-fit: cover; /* Ensure image covers the space */
-       object-position: center; /* Center the image */
-       display: block;
-       border-radius: inherit; /* Match the border radius of the project */
-   }
-
-   .project:hover {
-       transform: scale(1.03); /* Slight zoom on hover */
-       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Lighter hover shadow */
-   }
-
-   .projectstitlebox {
-       height: fit-content;
-       gap: 15px;
-   }
-
-   .projectstitle {
-       font-size: 3rem; /* Adjust font size */
-       padding: 20px;
-       margin: 0;
-       box-shadow:
-           -2px -2px 0 rgba(40, 92, 115, 0.8),
-           inset 0 0 15px rgba(255, 255, 255, 0.2),
-           0 0 20px rgba(128, 218, 255, 0.3);
-   }
-
-   .projectsubtitle {
-       font-size: 1.5rem;
-       padding: 15px;
-       margin-top: 5px;
-       box-shadow:
-           -2px -2px 0 rgba(40, 92, 115, 0.8),
-           inset 0 0 10px rgba(255, 255, 255, 0.2),
-           0 0 15px rgba(128, 218, 255, 0.3);
-   }
-}
-@media screen and (max-width: 768px) and (max-width: 480px) {
-   #boxContact {
-       min-height: 100vh;
-       padding: 2rem 1rem;
-   }
-
-   .ctitle {
-       width: 45%;
-       margin: 1rem auto;
-       padding: 20px!important;
-   }
-
-   .contactTitle {
-       font-size: 1.5rem;
-   }
-
-   .contactsubtitle {
-       font-size: 0.9rem;
-       margin-left: 0;
-   }
-
-   #Content {
-       flex-direction: column;
-       gap: 2rem;
-       padding: 1rem;
-   }
-
-   #connect {
-       margin-top: 2rem;
-       width: 100%;
-       padding: 1rem;
-   }
-
-   #writingboxes {
-       width: 100%;
-       gap: 1.5rem;
-   }
-
-   .email, .linkedinlink {
-       font-size: 1.2rem;
-       margin-left: 15px;
-   }
-
-   .eaddress, .llink {
-       font-size: 1rem;
-       margin-left: 15px;
-   }
-
-   .emailboxwrite, 
-   .subjectboxwrite, 
-   .messageboxwrite {
-       width: 100%;
-       max-width: none;
-   }
-
-   .boxemailtitle,
-   .subjecttitle,
-   .messagetitle {
-       font-size: 0.9rem;
-       padding: 8px;
-   }
-
-   .sendmessage {
-       margin: 1rem auto;
-       width: auto;
-       font-size: 0.8rem;
-       padding: 8px 16px;
-       margin-left: 25%;
-   }
-}
 @media screen and (max-width: 768px) {
    #scrollBox {
       position: fixed;
@@ -2051,217 +1856,97 @@ margin-bottom: 30px;
        margin: 20px 0;
        padding: 10px;
    }
+   #boxAbout {
+      height:fit-content; /* Allow the height to adjust to content */
+      padding: 20px; /* Add padding for better spacing on smaller screens */
+      background-size: cover; /* Ensure the background scales appropriately */
+  }
 
-   
-   /* Projects Section */
-   #boxProjects {
-       padding: 10px;
-       flex-direction: column;
-       justify-content: center;
-       align-items: center;
-       width: 100%;
-   }
+  #aboutTitle {
+      height: fit-content; /* Allow flexible height */
+      
+      gap: 10px; /* Reduce gap for smaller screens */
+      border-radius: 20px;
+  }
 
-   .project {
-       width: 100%;
-       height: auto;
-       margin-bottom: 20px;
-   }
+  .about {
+      font-size: 2.5rem; /* Reduce title size */
+  }
 
-   .project-header {
-       font-size: 0.8rem;
-       padding: 5px;
-   }
+  .miniabout {
+      font-size: 1rem; /* Adjust subtitle size */
+      margin-top: 10px;
+  }
 
-   /* Contact Section */
-   #boxContact {
-       padding: 1rem;
-   }
-
-   .contactTitle {
-       font-size: 1.2rem;
-   }
-
-   .email,
-   .linkedinlink {
-       font-size: 1rem;
-   }
-
-   .eaddress,
-   .llink {
-       font-size: 0.9rem;
-   }
-
-   .sendmessage {
-       font-size: 0.7rem;
-       padding: 8px 12px;
-   }
-
-   /* Scroll Box */
-   #scrollBox {
-       font-size: 12px;
-       padding: 8px;
-   }
-
-   #scrollBox.show {
-       transform: translateX(-0%) translateY(0);
-   }
-
-   #scrollBox a {
-       text-decoration: none;
-   }
-
-
-#boxProjects {
-   
-   object-fit: contain !important;
-    height: auto; /* Allow height to adjust */
-    background-size: cover;
-    padding: 10px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;; /* Ensure content is centered */
-}
-
-.projectsbox {
-    flex-direction: column; /* Stack the projects vertically */
-    align-items: center;
-    justify-content: center;
-    max-width: 100% !important; /* Center-align the projects */
-    width: 100%; /* Full width */
-    height: auto;
+  #aboutInfo {
     margin-top: 20px;
+   margin-bottom: 30px;
+      flex-direction: column; /* Stack items vertically */
+      align-items: center;
+      justify-content: center;
+      gap: 15px; /* Adjust spacing */
+  }
+
+  #description {
+      width: 50%; /* Adjust width to fit smaller screens */
+      max-width: none; /* Remove width restrictions */
+      margin-top: 20px;
+      padding: 10px;
+      margin-bottom: 40px;
+     
+  }
+
+  .descTitle {
+      font-size: 1.3rem; /* Adjust title size */
+      padding: 10px; /* Reduce padding */
+  }
+
+  .descp {
+      font-size: 0.9rem; /* Reduce text size */
+      padding: 15px; /* Adjust padding for smaller screens */
+      margin: 10px 0;
+  }
+
+  #skills {
+     margin-top: 40px;
+     margin-left: 20px;
+      padding: 15px;
+      max-height: none;
+      margin-bottom: 20px; /* Allow height to grow with content */
+  }
+  .itTitle {
+      font-size: 1.3rem; /* Adjust title size */
+      /* Reduce padding */
+  }
+
+  #itskills {
+      gap: 15px; /* Reduce gaps between elements */
+  }
+
+  .javascript, .java, .sql, .html, .css, .nodejs, .aws, .photoshop {
+      font-size: 0.8rem; /* Smaller font size */
+      padding: 10px; /* Adjust padding for smaller buttons */
+      
+  }
+  .polisci, .compsci, .cloud, .CV{
+     margin-top: 10px;
+     }
+
+  #certifications {
+     margin-top: 30px;
+      flex-direction: column; /* Stack certifications vertically */
+      gap: 10px; /* Reduce spacing */
+  }
+
+  .certTitle {
+      font-size: 1.3rem; /* Adjust font size */
+      padding: 10px;
+  }
+
+  .certificates {
+      flex-direction: column; /* Stack certificates vertically */
+      gap: 10px;
+  }
+
    
-}
-
-.projectsbox1,
-.projectsbox2 {
-    width: 100%; /* Full width for each box */
-    height: auto; /* Adjust to content height */
-    gap: 50px; 
-    flex-direction: column;
-    align-items: center; /* Center align the boxes inside */
-    justify-content: center;
-    /* Adjust the gap between projects */
-}
-
-.project {
-    object-fit: contain !important;
-    aspect-ratio: 16/9; /* Maintain 16:9 aspect ratio */
-    position: relative;
-    width: 100%;
-    height: auto; /* Adjust height to content */
-    overflow: hidden; /* Ensure no overflow from the image */
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 50px;
-}
-
-/* Adjust project header to be attached to the top of each project */
-.project-header {
-    font-size: 0.9rem; /* Slightly smaller font */
-    padding: 10px; /* Adjust padding for spacing */
-    text-align: center; /* Center align the header */
-    position: absolute;
-    top: 0px; /* Position header at the top */
-    left: 50%;
-    transform: translateX(-50%); /* Center the header horizontally */
-    background-color:#131f6a; /* Background color for visibility */
-    color: white;
-    width: 100%;
-}
-
-.project img {
-    width: 100%;
-    height: auto; /* Make the image responsive */
-    object-fit: cover; /* Ensure image covers the space */
-    object-position: center; /* Center the image */
-    display: block;
-    border-radius: inherit; /* Match the border radius of the project */
-}
-
-.project:hover {
-    transform: scale(1.03); /* Slight zoom on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Lighter hover shadow */
-}
-
-.projectstitlebox {
-    height: fit-content;
-    gap: 15px;
-}
-
-.projectstitle {
-    font-size: 3rem; /* Adjust font size */
-    padding: 20px;
-    margin: 0;
-    box-shadow:
-        -2px -2px 0 rgba(40, 92, 115, 0.8),
-        inset 0 0 15px rgba(255, 255, 255, 0.2),
-        0 0 20px rgba(128, 218, 255, 0.3);
-}
-
-
-#boxAbout {
-   height: fit-content; /* Allow the height to adjust to content */
-   padding: 20px; /* Add padding for better spacing on smaller screens */
-   background-size: cover; /* Ensure the background scales appropriately */
-}
-
-#aboutTitle {
-   height: fit-content; /* Allow flexible height */
-   
-   gap: 10px; /* Reduce gap for smaller screens */
-   border-radius: 20px;
-}
-
-.about {
-   font-size: 2.5rem; /* Reduce title size */
-}
-
-.miniabout {
-   font-size: 1rem; /* Adjust subtitle size */
-   margin-top: 10px;
-}
-
-#aboutInfo {
- margin-top: 20px;
-
-   flex-direction: column; /* Stack items vertically */
-   align-items: center;
-   justify-content: center;
-   gap: 15px; /* Adjust spacing */
-}
-
-#description {
-   width: 50%; /* Adjust width to fit smaller screens */
-   max-width: none; /* Remove width restrictions */
-   margin-top: 20px;
-   padding: 10px;
-   margin-bottom: 40px;
-  
-}
-
-.descTitle {
-   font-size: 1.3rem; /* Adjust title size */
-   padding: 10px; /* Reduce padding */
-}
-
-.descp {
-   font-size: 0.9rem; /* Reduce text size */
-   padding: 15px; /* Adjust padding for smaller screens */
-   margin: 10px 0;
-}
-
-#skills {
-  margin-top: 40px;
-  margin-left: 20px;
-   padding: 15px;
-   max-height: none;
-   margin-bottom: 20px; /* Allow height to grow with content */
-}
 }
