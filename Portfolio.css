@@ -1959,7 +1959,7 @@ textarea {
    justify-content: center ;
    z-index: 1;
    position: relative;
-   overflow: visible;
+   overflow-x: hidden;
    padding: 20px;
    box-sizing: border-box;
 
