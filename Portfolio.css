@@ -1814,7 +1814,7 @@ textarea {
    /* Name Box */
    #boxName {
        font-size: 1.2rem;
-       margin-bottom: 50px;
+       margin-bottom: 80px;
        margin-top: 10px;
        padding: 5px;
        background-color: white;
@@ -1880,7 +1880,7 @@ textarea {
 
   #aboutInfo {
     margin-top: 20px;
-   margin-bottom: 30px;
+ 
       flex-direction: column; /* Stack items vertically */
       align-items: center;
       justify-content: center;
@@ -1960,6 +1960,8 @@ textarea {
    z-index: 1;
    position: relative;
    overflow: visible;
+   padding: 20px;
+   box-sizing: border-box;
 
 }
 .projectsbox {
@@ -1969,7 +1971,7 @@ textarea {
    align-items: center; 
    justify-content: center;/* Center-align the projects */
    gap: 30px; /* Adjust gap between projects */
-   width: 100%; /* Take full width */
+   width: auto; /* Take full width */
    height: 100%; /* Adjust to content height */
    margin-top: 20px;
 }
@@ -1977,14 +1979,14 @@ textarea {
 .projectsbox1,
 .projectsbox2 {
    height: auto;
-   width: auto;
+   width: 100%;
    /* Adjust height automatically */
    gap: 20px; /* Smaller gap between projects */
 }
 
 .project {
 position: relative;
-width: auto;
+width: 100;
 height: auto;
 max-width: 300px;
 overflow: hidden; /* Ensures no overflow from the image */

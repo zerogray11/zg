@@ -390,3 +390,4 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('touchend', hideTooltip, { passive: true });
     
 });
+
