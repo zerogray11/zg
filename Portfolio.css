@@ -1789,7 +1789,7 @@ textarea {
        flex-direction: column;
        gap: 5%;
        padding: 10px;
-       height: auto; /* Allow flexible height */
+       height: 100vh; /* Allow flexible height */
        background-size: cover;
    }
 
@@ -1908,7 +1908,7 @@ textarea {
   }
 
   #skills {
-     margin-top: 40px;
+    
      margin-left: 20px;
       padding: 15px;
       max-height: none;
@@ -1948,5 +1948,52 @@ textarea {
       gap: 10px;
   }
 
-   
+  #boxProjects{
+   height:auto;
+   background:url(darkbackfinal.mov);
+ 
+  
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center ;
+   z-index: 1;
+   position: relative;
+   overflow: visible;
+
+}
+.projectsbox {
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column; /* Stack the projects vertically */
+   align-items: center; 
+   justify-content: center;/* Center-align the projects */
+   gap: 30px; /* Adjust gap between projects */
+   width: 100%; /* Take full width */
+   height: 100%; /* Adjust to content height */
+   margin-top: 20px;
+}
+
+.projectsbox1,
+.projectsbox2 {
+   height: auto;
+   width: auto;
+   /* Adjust height automatically */
+   gap: 20px; /* Smaller gap between projects */
+}
+
+.project {
+position: relative;
+width: auto;
+height: auto;
+max-width: 300px;
+overflow: hidden; /* Ensures no overflow from the image */
+border-radius: 10px; /* Matches image rounding */
+display: flex;
+justify-content: center; /* Center the image horizontally */
+align-items: center; /* Center the image vertically */
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 }
