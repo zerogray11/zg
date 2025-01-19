@@ -1802,7 +1802,7 @@ textarea {
 
    .hey {
        font-size: 1rem !important; /* Adjust font for headings */
-       margin-top: 5px;
+       margin-top: 12px;
    }
 
    p {
@@ -1974,6 +1974,7 @@ textarea {
    width: auto; /* Take full width */
    height: 100%; /* Adjust to content height */
    margin-top: 20px;
+   margin-bottom: 15px;
 }
 
 .projectsbox1,
@@ -1997,5 +1998,7 @@ align-items: center; /* Center the image vertically */
 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
+.ctitle{
+   margin-top: 20px;
+}
 }
