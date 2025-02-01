@@ -1951,7 +1951,7 @@ textarea {
 
   #boxProjects{
    height:auto;
-   background:url(darkbackfinal.mov);
+   background-image: url(bluegradient.jpeg);
  
   
    display: flex;
