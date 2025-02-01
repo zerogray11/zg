@@ -718,7 +718,7 @@ width: fit-content;
 
  #boxProjects{
     height:auto;
-    background:url("./galaxy.jpeg");
+    background-image:url("bluegradient2.jpeg");
   
    
     display: flex;
@@ -1951,7 +1951,7 @@ textarea {
 
   #boxProjects{
    height:auto;
-   background-image: url(bluegradient.jpeg);
+   background-image: url(bluegradient2.jpeg);
  
   
    display: flex;
