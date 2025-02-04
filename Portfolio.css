@@ -718,7 +718,17 @@ width: fit-content;
 
  #boxProjects{
     height:auto;
-    background-image:url("bluegradient2.jpeg");
+    
+    background: linear-gradient(
+    to bottom,
+    #020B2C,    /* Deep midnight blue at top */
+    #041245,    /* Rich navy blue */
+    #0D1959,    /* Deep royal blue */
+    #1A1B6B,    /* Deep blue-purple transition */
+    #2B1980,    /* Rich purple */
+    #3A1A8F,    /* Deep purple */
+    #461AA0     /* Rich royal purple at bottom */
+  );
   
    
     display: flex;
@@ -1072,7 +1082,7 @@ transition: transform 0.3s ease, box-shadow 0.3s ease;
    border: 2px solid #5f5fff; /* Cool space-like color */
    background: linear-gradient(45deg, #2e2e8c, #101035); /* Deep space gradient */
    margin-top: 50px;
-   padding: 20px;
+   padding: 25px;
    border-radius: 50%;
    height: fit-content;
    width: fit-content;
@@ -1951,7 +1961,7 @@ textarea {
 
   #boxProjects{
    height:auto;
-   background-image: url(bluegradient2.jpeg);
+  
  
   
    display: flex;
@@ -1989,7 +1999,7 @@ textarea {
 .project {
 position: relative;
 width: 100;
-aspect-ratio: 4/3;
+aspect-ratio: 16/9;
 height: auto;
 max-width: 300px;
 overflow: hidden; /* Ensures no overflow from the image */
